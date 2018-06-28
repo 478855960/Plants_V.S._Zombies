@@ -69,3 +69,13 @@ class Setting(object):
         self.chomper = pygame.transform.scale(self.chomper, (55, 68))
         self.sunflower = pygame.transform.scale(self.sunflower, (55, 68))
         self.cardPeashooterdouble = pygame.transform.scale(self.cardPeashooterdouble, (55, 68))
+
+        # 卡片点击图片集合
+        self.cardImgs = [
+            pygame.image.load('image/mouseMoveCard/mouseNut.gif'),
+            pygame.image.load('image/mouseMoveCard/mouseSunflower.gif'),
+            pygame.image.load('image/mouseMoveCard/mousepeashooter.gif'),
+            pygame.image.load('image/mouseMoveCard/mouseChomper.gif'),
+            pygame.image.load('image/mouseMoveCard/mouseCherry.gif'),
+            pygame.image.load('image/mouseMoveCard/repeater.gif')
+        ]

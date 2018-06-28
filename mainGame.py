@@ -3,7 +3,12 @@ from conf.settings import Setting
 from entity.zombie.zombie_bucket import Zombie_bucket
 from entity.zombie.zombie_conehead import Zombie_conehead
 from entity.zombie.zombie_normal import Zombie_normal
+from util.constant import Constant
+from util.bus import Bus
+import mouseListener
+import painter
 
+bus = Bus()
 sets = Setting()
 
 screen = pygame.display.set_mode((1400, 600), 0, 0)
@@ -16,26 +21,11 @@ zombieIndex = 0
 '''
 paint部分
 '''
-
-
-# 初始场景绘制
-def initScenario():
-    screen.blit(sets.background, (0, 0))
-    screen.blit(sets.seedBank, (0, 0))
-    # 绘制卡片
-    cardoffset = 60
-    screen.blit(sets.cardNutWall,(80,10))
-    screen.blit(sets.sunflower, (80 + cardoffset * 1, 10))
-    screen.blit(sets.cardPeashooter, (80 + cardoffset * 2,10))
-    screen.blit(sets.chomper, (80 + cardoffset * 3, 10))
-    screen.blit(sets.cherry, (80 + cardoffset * 4, 10))
-    screen.blit(sets.cardPeashooterdouble, (80 + cardoffset * 5, 10))
-
-
 # 场景绘制主函数
 def paint():
-    initScenario()
+    painter.initScenario(bus, screen, sets)
     paintZombies()
+    painter.cardMovePaint(bus, screen, sets)
 
 
 # 绘制僵尸
@@ -47,14 +37,13 @@ def paintZombies():
 '''
 action部分
 '''
-
-
 # 业务逻辑主函数
 def action():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
-
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            mouseListener.cardMouseClickListener(bus)
     stepAction()
     zombiesAction()
 
@@ -64,7 +53,6 @@ def stepAction():
     # 僵尸走一步
     for zombie in zombies:
         zombie.step()
-
 
 # 僵尸生成
 def zombiesAction():
