@@ -1,0 +1,15 @@
+#Interlij
+*.iml
+*/*.iml
+.idea/
+
+
+#eclipse
+.classpath
+.project
+.settings/
+
+#vscode
+.vscode/
+
+__pycache__/
