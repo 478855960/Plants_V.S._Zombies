@@ -53,3 +53,19 @@ class Setting(object):
         self.wallNutCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked1.gif')
         self.wallNutBadlyCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked2.gif')
         self.repeaterImg = pygame.image.load(plantsImgDir + 'Repeater/Repeater.gif')
+
+        # 加载卡片路径
+        self.cardNutWall = pygame.image.load('image/card/nutWall.png')
+        self.cardPeashooter = pygame.image.load('image/card/peashooter.png')
+        self.cherry = pygame.image.load('image/card/cherry.png')
+        self.chomper = pygame.image.load('image/card/chomper.png')
+        self.sunflower = pygame.image.load('image/card/sunflower.png')
+        self.cardPeashooterdouble = pygame.image.load('image/card/peashooterdouble.png')
+
+        # 卡片图片缩放
+        self.cardNutWall = pygame.transform.scale(self.cardNutWall, (55,68))
+        self.cardPeashooter = pygame.transform.scale(self.cardPeashooter, (55, 68))
+        self.cherry = pygame.transform.scale(self.cherry, (55, 68))
+        self.chomper = pygame.transform.scale(self.chomper, (55, 68))
+        self.sunflower = pygame.transform.scale(self.sunflower, (55, 68))
+        self.cardPeashooterdouble = pygame.transform.scale(self.cardPeashooterdouble, (55, 68))

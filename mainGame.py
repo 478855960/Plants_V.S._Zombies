@@ -22,6 +22,14 @@ paint部分
 def initScenario():
     screen.blit(sets.background, (0, 0))
     screen.blit(sets.seedBank, (0, 0))
+    # 绘制卡片
+    cardoffset = 60
+    screen.blit(sets.cardNutWall,(80,10))
+    screen.blit(sets.sunflower, (80 + cardoffset * 1, 10))
+    screen.blit(sets.cardPeashooter, (80 + cardoffset * 2,10))
+    screen.blit(sets.chomper, (80 + cardoffset * 3, 10))
+    screen.blit(sets.cherry, (80 + cardoffset * 4, 10))
+    screen.blit(sets.cardPeashooterdouble, (80 + cardoffset * 5, 10))
 
 
 # 场景绘制主函数
