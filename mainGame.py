@@ -31,10 +31,8 @@ def main():
     pygame.display.set_caption("植物大战僵尸")
 
     while True:
-
         action()
         paint()
-
         pygame.display.update()
 
 
