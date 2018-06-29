@@ -10,7 +10,7 @@ class Peashooter(Plant):
         self.x = x
         self.y = y
         self.images = images
-        self.image = pygame.image.load(self.images[0])
+        self.image = images[0]
         self.width = 0
         self.height = 0
         super(Peashooter, self).__init__(screen, self.x, self.y, self.image)

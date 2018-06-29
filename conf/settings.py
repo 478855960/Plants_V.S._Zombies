@@ -44,14 +44,6 @@ class Setting(object):
             "image/zombie_bucket/z_02_08.png"
         ]
 
-        self.initPlantsImg = [
-            plantsImgDir + 'SunFlower/SunFlower1/',
-            plantsImgDir + 'SunFlower/SunFlower1/',
-            plantsImgDir + 'SunFlower/SunFlower1/',
-            plantsImgDir + 'SunFlower/SunFlower1/',
-            plantsImgDir + 'SunFlower/SunFlower1/',
-            plantsImgDir + 'SunFlower/SunFlower1/',
-        ]
         # 掉头僵尸
         self.zombieLostHeadImages = [
             "image/zombieLostHead/0.png",
@@ -199,5 +191,19 @@ class Setting(object):
             self.cardShovel
         ]
 
-        # 子弹
+        # 子弹贴图
         bulletImg = 'image/bullet_01.png'
+
+        # 关于草地格子的坐标
+        # 格子X坐标
+        self.gridXIndexes = [251, 334, 418, 500, 580, 662, 740, 820, 900, 996]
+        # 格子高度：
+        self.gridHeight = 95
+        # 下边界
+        self.bottomY = 574
+        # 左边界：
+        self.leftX = 251
+        # 上边界：
+        self.topY = self.bottomY - 5 * self.gridHeight
+        # 右边界：
+        self.rightX = 996
