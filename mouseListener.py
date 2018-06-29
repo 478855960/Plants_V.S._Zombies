@@ -1,11 +1,13 @@
 from util.constant import Constant
 from conf.settings import Setting
 import pygame
-
 from util.loadimages import getImages
-from entity.sunflower import Sunflower
-from entity.peashooter import Peashooter
+from entity.plant.sunflower import Sunflower
+from entity.plant.peashooter import Peashooter
 from entity.sun import Sun
+
+from entity.plant.sunflower import Sunflower
+from entity.plant.peashooter import Peashooter
 import random
 sets = Setting()
 # 当鼠标被点击时调用函数
@@ -58,17 +60,27 @@ def initPlantsMouseClickListener(bus, screen):
             gridY = int((mouseY - sets.topY) / sets.gridHeight)
             plantX = sets.gridXIndexes[gridX]
             plantY = sets.topY + sets.gridHeight * gridY
-            if bus.cardState == Constant.CARD_CLICKED:
-                if bus.cardSelection == Constant.SUNFLOWER_SELECTED:
-                    imgsPath = sets.plantsInitImages[1]
-                    imgs = getImages(imgsPath)
-                    sunflower = Sunflower(screen, plantX, plantY, imgs)
-                    bus.paintPlants.append(sunflower)
-                elif bus.cardSelection == Constant.PEASHOOTER_SELECTED:
-                    imgsPath = sets.plantsInitImages[2]
-                    imgs = getImages(imgsPath)
-                    peashooter = Peashooter(screen, plantX, plantY, imgs)
-                    bus.paintPlants.append(peashooter)
+            imagedict = {
+                Constant.NUT_SELECTED: 0,
+                Constant.SUNFLOWER_SELECTED: 1,
+                Constant.PEASHOOTER_SELECTED: 2,
+                Constant.CHOMPER_SELECTED: 3,
+                Constant.CHERRY_SELECTED: 4,
+                Constant.REPEATER_SELECTED: 5,
+            }
+            plantdict = [
+                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[0])),
+                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[1])),
+                Peashooter(screen, plantX, plantY, getImages(sets.plantsInitImages[2])),
+                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[3])),
+                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[4])),
+                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[5])),
+            ]
+            if bus.cardState == Constant.CARD_CLICKED and bus.cardSelection in imagedict:
+                index = imagedict[bus.cardSelection]
+                bus.paintPlants.append(plantdict[index])
+                bus.cardState = Constant.CARD_NOT_CLICKED
+                bus.sunScore -= plantdict[index].sunshine
 
 def sunMouseClickListener(bus, screen, sets):
         # 获取列表  中左键   返回 True  False

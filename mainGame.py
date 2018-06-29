@@ -30,11 +30,6 @@ def initSun():
         sun = Sun(screen, sets.sunImage, xx, yy,goal)
         bus.sunFall.append(sun)
 
-
-
-# 植物频率值
-plantIndex = 0
-
 # 初始场景绘制
 def initScenario():
     screen.blit(sets.background, (0, 0))
@@ -63,9 +58,6 @@ def paint():
 
 
 
-
-
-
 # 绘制僵尸
 def paintZombies():
     for zombie in bus.zombies:
@@ -73,10 +65,7 @@ def paintZombies():
 # 绘制植物
 def paintPlants():
     for plant in bus.paintPlants:
-        global plantIndex
-        plantIndex += 1
-        ix = plantIndex / 5 % len(plant.images)
-        plant.img = plant.images[int(ix)]
+        plant.step()
         plant.blitme()
 
 '''

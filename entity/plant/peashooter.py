@@ -1,5 +1,5 @@
 import pygame
-from entity.plant import Plant
+from entity.plant.plant import Plant
 from conf.settings import Setting
 
 set = Setting()
@@ -30,11 +30,11 @@ class Peashooter(Plant):
         self.index += 1
         # 执行功能
         if self.index == self.interval:
-            function()
+            self.function()
             self.index = 0
         # 更改图片
-        ix = self.index / 10 % len(self.images)
-        self.image = pygame.image.load(self.images[int(ix)])
+        ix = self.index / 7 % len(self.images)
+        self.image = self.images[int(ix)]
 
 
 

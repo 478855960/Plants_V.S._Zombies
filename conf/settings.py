@@ -262,13 +262,13 @@ class Setting(object):
 
         # 关于草地格子的坐标
         # 格子X坐标
-        self.gridXIndexes = [251, 334, 418, 500, 580, 662, 740, 820, 900, 996]
+        self.gridXIndexes = [255, 340, 418, 500, 580, 662, 740, 820, 900, 996]
         # 格子高度：
         self.gridHeight = 95
         # 下边界
         self.bottomY = 574
         # 左边界：
-        self.leftX = 251
+        self.leftX = self.gridXIndexes[0]
         # 上边界：
         self.topY = self.bottomY - 5 * self.gridHeight
         # 右边界：

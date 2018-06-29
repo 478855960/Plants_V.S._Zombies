@@ -19,10 +19,6 @@ class Plant(object):
         self.interval = 0
         self.cd = 0
 
-    # 在屏幕上绘制
-    def blitme(self):
-        self.screen.blit(self.img, (self.x, self.y))
-
     # 植物的功能：如向日葵即生产阳光、豌豆射手即攻击
     @abc.abstractmethod
     def function(self):
