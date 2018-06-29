@@ -4,9 +4,11 @@ from entity.zombie.zombie_bucket import Zombie_bucket
 from entity.zombie.zombie_conehead import Zombie_conehead
 from entity.zombie.zombie_normal import Zombie_normal
 from util.constant import Constant
+from entity.sun import Sun
 from util.bus import Bus
 import mouseListener
 import painter
+import actioner
 
 bus = Bus()
 sets = Setting()
@@ -18,14 +20,36 @@ zombies = []
 # 僵尸频率值
 zombieIndex = 0
 
+def initSun():
+    for i in range(4):
+        xx = random.randint(260, 880)
+        yy = -random.randint(100, 300)
+        goal = random.randint(300, 600)
+        sun = Sun(screen, sets.sunImage, xx, yy,goal)
+        bus.sunFall.append(sun)
+
+
+
 '''
 paint部分
 '''
+
 # 场景绘制主函数
 def paint():
     painter.initScenario(bus, screen, sets)
     paintZombies()
     painter.cardMovePaint(bus, screen, sets)
+
+    # 绘制下落及在地上的太阳
+    painter.paintSun(bus, screen, sets)
+
+
+    # 绘制太阳总分数状态
+    painter.paintSunScore(bus, screen, sets)
+
+
+
+
 
 
 # 绘制僵尸
@@ -39,13 +63,17 @@ action部分
 '''
 # 业务逻辑主函数
 def action():
+    # 监听事件
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouseListener.cardMouseClickListener(bus)
+            mouseListener.sunMouseClickListener(bus, screen, sets)
     stepAction()
     zombiesAction()
+    # 阳光的动作
+    actioner.sunAction(bus, screen, sets)
 
 
 # 走一步
@@ -73,9 +101,10 @@ def zombiesAction():
 '''
 
 
+
 def main():
     pygame.display.set_caption("植物大战僵尸")
-
+    initSun()
     while True:
         action()
         paint()

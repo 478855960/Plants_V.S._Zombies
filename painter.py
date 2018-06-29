@@ -27,3 +27,22 @@ def initScenario(bus, screen, sets):
     screen.blit(sets.chomper, (80 + CARD_OFFSET * 3, 10))
     screen.blit(sets.cherry, (80 + CARD_OFFSET * 4, 10))
     screen.blit(sets.cardPeashooterdouble, (80 + CARD_OFFSET * 5, 10))
+
+
+# 绘制太阳，包括在正在下落的和在地上的
+def paintSun(bus, screen, sets):
+    for i in range(len(bus.sunFall)):
+        bus.sunFall[i].blitme()
+
+    for i in range(len(bus.sunStay)):
+        bus.sunStay[i].blitme()
+
+# 绘制太阳数
+def paintSunScore(bus, screen, sets):
+    pygame.font.init()
+    ft = pygame.font.Font('msyh.ttf', 20)
+    scoreStr = ft.render("%d"%bus.sunScore, True, (0, 0 ,0))
+    if bus.sunScore <= 1000:
+        screen.blit(scoreStr, (19, 59))
+    else:
+        screen.blit(scoreStr, (17, 59))
