@@ -1,5 +1,9 @@
 from util.constant import Constant
+from conf.settings import Setting
 import pygame
+from util.loadimages import getImages
+from entity.sunflower import Sunflower
+sets = Setting()
 
 # 当鼠标被点击时调用函数
 # 用来绑定卡片监听事件
@@ -29,3 +33,15 @@ def cardMouseClickListener(bus):
                 bus.cardSelection = dict[i]
     if rightButtonDown:
         bus.cardState = Constant.CARD_NOT_CLICKED
+
+# 用来绑定卡片监听事件
+def initPlantsMouseClickListener(bus, screen):
+    leftButtonDown = pygame.mouse.get_pressed()[0]
+    if leftButtonDown:
+        mousex, mousey = pygame.mouse.get_pos()
+        if bus.cardState == Constant.CARD_CLICKED:
+            if bus.cardSelection == Constant.SUNFLOWER_SELECTED:
+                imgsPath = sets.initPlantsImg[1]
+                imgs = getImages(imgsPath)
+                sunflower = Sunflower(screen, mousex, mousey, imgs)
+                bus.paintPlants.append(sunflower)

@@ -1,5 +1,6 @@
 from util.constant import Constant
 import pygame
+
 # 卡片图标鼠标跟随绘制
 def cardMovePaint(bus, screen, sets):
     if bus.cardState == Constant.CARD_CLICKED:

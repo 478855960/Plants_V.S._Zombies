@@ -4,11 +4,11 @@ description: all specific plants's superclass
 '''
 import pygame, abc
 class Plant(object):
-    def __init__(self, screen, x, y):
+    def __init__(self, screen, x, y, img):
         self.screen = screen
         self.x = x
         self.y = y
-        self.img = ''
+        self.img = img
         self.width = 0
         self.height = 0
 
@@ -19,14 +19,13 @@ class Plant(object):
         self.interval = 0
         self.cd = 0
 
+    # 在屏幕上绘制
+    def blitme(self):
+        self.screen.blit(self.img, (self.x, self.y))
+
     # 植物的功能：如向日葵即生产阳光、豌豆射手即攻击
     @abc.abstractmethod
     def function(self):
-        pass
-
-    # 在屏幕上绘制
-    @abc.abstractmethod
-    def blitme(self):
         pass
 
     # 进行一次功能执行

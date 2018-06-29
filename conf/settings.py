@@ -42,13 +42,22 @@ class Setting(object):
             "image/zombie_bucket/z_02_07.png",
             "image/zombie_bucket/z_02_08.png"
         ]
+        self.initPlantsImg = [
+            plantsImgDir + 'SunFlower/SunFlower1/',
+            plantsImgDir + 'SunFlower/SunFlower1/',
+            plantsImgDir + 'SunFlower/SunFlower1/',
+            plantsImgDir + 'SunFlower/SunFlower1/',
+            plantsImgDir + 'SunFlower/SunFlower1/',
+            plantsImgDir + 'SunFlower/SunFlower1/',
+        ]
         self.peashooterImg = pygame.image.load(plantsImgDir + 'Peashooter/Peashooter.gif')
         self.cherryBombImg = pygame.image.load(plantsImgDir + 'CherryBomb/CherryBomb.gif')
         self.cherryBombBoomImg = pygame.image.load(plantsImgDir + 'CherryBomb/Boom.gif')
         self.chomperImg = pygame.image.load(plantsImgDir + 'Chomper/Chomper.gif')
         self.chomperAttackImg = pygame.image.load(plantsImgDir + 'Chomper/ChomperAttack.gif')
         self.chomperDigestImg = pygame.image.load(plantsImgDir + 'Chomper/ChomperDigest.gif')
-        self.sunFlowerImg = pygame.image.load(plantsImgDir + 'SunFlower/SunFlower.gif')
+        # self.sunFlowerImg = pygame.image.load(plantsImgDir + 'SunFlower/SunFlower1.gif')
+        self.sunFlowerImg = plantsImgDir + 'SunFlower/SunFlower1/'
         self.wallNutImg = pygame.image.load(plantsImgDir + 'WallNut/WallNut.gif')
         self.wallNutCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked1.gif')
         self.wallNutBadlyCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked2.gif')

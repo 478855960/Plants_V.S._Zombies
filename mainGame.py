@@ -12,38 +12,58 @@ bus = Bus()
 sets = Setting()
 
 screen = pygame.display.set_mode((1400, 600), 0, 0)
+sets = Setting()
 
 # 僵尸存储列表
 zombies = []
 # 僵尸频率值
 zombieIndex = 0
 
-'''
-paint部分
-'''
+# 植物频率值
+plantIndex = 0
+
+# 初始场景绘制
+def initScenario():
+    screen.blit(sets.background, (0, 0))
+    screen.blit(sets.seedBank, (0, 0))
+
 # 场景绘制主函数
 def paint():
     painter.initScenario(bus, screen, sets)
     paintZombies()
     painter.cardMovePaint(bus, screen, sets)
+    paintPlants()
 
 
 # 绘制僵尸
 def paintZombies():
     for zombie in zombies:
         zombie.blitme()
-
+# 绘制植物
+def paintPlants():
+    for plant in bus.paintPlants:
+        global plantIndex
+        plantIndex += 1
+        ix = plantIndex / 5 % len(plant.images)
+        plant.img = plant.images[int(ix)]
+        plant.blitme()
 
 '''
 action部分
 '''
 # 业务逻辑主函数
 def action():
+    # 获取鼠标坐标点
+    mouseX, mouseY = pygame.mouse.get_pos()
+    # sunflower = Sunflower(screen, mouseX, mouseY)
+    # sunflower.blitme()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
         if event.type == pygame.MOUSEBUTTONDOWN:
+            mouseListener.initPlantsMouseClickListener(bus, screen)
             mouseListener.cardMouseClickListener(bus)
+
     stepAction()
     zombiesAction()
 
@@ -75,7 +95,6 @@ def zombiesAction():
 
 def main():
     pygame.display.set_caption("植物大战僵尸")
-
     while True:
         action()
         paint()
