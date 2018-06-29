@@ -128,8 +128,10 @@ def hitAction():
 
 def hit(zb):
     if zb.x == 500:
-        zb.images = sets.normalAttackImages
-
+        if isinstance(zb, Zombie_normal):
+            zb.images = sets.normalAttackImages
+        elif isinstance(zb, Zombie_conehead):
+            zb.images = sets.coneheadAttackImages
 '''
 程序入口
 '''

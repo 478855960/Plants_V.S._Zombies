@@ -21,7 +21,8 @@ class Zombie_conehead(ZombieObject):
         pass
 
     def step(self):
-        self.x -= 0.5
+        if self.x > 500:
+            self.x -= 0.5
         self.index += 1
-        ix = self.index / 8 % len(self.images)
+        ix = self.index / (len(self.images)/2) % len(self.images)
         self.image = pygame.image.load(self.images[int(ix)])
