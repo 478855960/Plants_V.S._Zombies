@@ -54,7 +54,12 @@ def initScenario(bus, screen, sets):
     screen.blit(sets.cardShovelBack, (448, 0))
     screen.blit(sets.cardShovel, (444, 10))
 
-
+    # 绘制暂停按钮
+    screen.blit(sets.Button, (1265, 10))
+    pygame.font.init()
+    ft = pygame.font.Font('msyh.ttf', 28)
+    Str = ft.render("暂 停", True, (0, 0, 0))
+    screen.blit(Str, (1290, 10))
 
 # 绘制太阳，包括在正在下落的和在地上的
 def paintSun(bus, screen, sets):
@@ -64,11 +69,11 @@ def paintSun(bus, screen, sets):
     for i in range(len(bus.sunStay)):
         bus.sunStay[i].blitme()
 
-# 绘制太阳数
+# 绘制阳光数
 def paintSunScore(bus, screen, sets):
     pygame.font.init()
     ft = pygame.font.Font('msyh.ttf', 20)
-    scoreStr = ft.render("%d"%bus.sunScore, True, (0, 0 ,0))
+    scoreStr = ft.render("%d"%bus.sunScore, True, (0, 0, 0))
     if bus.sunScore <= 1000:
         screen.blit(scoreStr, (19, 59))
     else:
@@ -102,3 +107,11 @@ def painProgressBar(bus, screen, sets):
         screen.blit(sets.flagMeterParts1, (1340 - percentage, 560))
 
     screen.blit(sets.flagMeterParts2, (1205, 557))
+
+# 绘制暂停标志
+def paintPause(bus, screen, sets):
+    screen.blit(sets.Pause, (500, 0))
+    pygame.font.init()
+    ft = pygame.font.Font('msyh.ttf', 20)
+    Str = ft.render("请点击鼠标左键继续", True, (255, 0, 0))
+    screen.blit(Str, (550, 90))
