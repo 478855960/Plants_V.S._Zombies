@@ -58,6 +58,10 @@ def paint():
     # 绘制进度条
     painter.painProgressBar(bus, screen, sets)
 
+    # 判断是否需要画暂停标志
+    if bus.state == bus.PAUSE:
+        painter.paintPause(bus, screen, sets)
+
 
 
 # 绘制僵尸
@@ -86,15 +90,17 @@ def action():
             mouseListener.initPlantsMouseClickListener(bus, screen)
             mouseListener.cardMouseClickListener(bus)
             mouseListener.sunMouseClickListener(bus, screen, sets)
-    stepAction()
-    zombiesAction()
+            mouseListener.runOrPause(bus, screen, sets)
+    if bus.state == bus.RUNNING:
+        stepAction()
+        zombiesAction()
 
-    hitAction()
-    # 阳光的动作
-    actioner.sunAction(bus, screen, sets)
+        hitAction()
+        # 阳光的动作
+        actioner.sunAction(bus, screen, sets)
 
-    # 控制全局的时间轴时间增加
-    bus.globalTime += 1
+        # 控制全局的时间轴时间增加
+        bus.globalTime += 1
 
 
 # 走一步

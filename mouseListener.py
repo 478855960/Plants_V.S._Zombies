@@ -126,3 +126,13 @@ def sunMouseClickListener(bus, screen, sets):
                 goal = random.randint(300, 600)
                 bus.sunStay[i] = Sun(screen, sets.sunImage, xx, yy, goal)
                 break
+
+def runOrPause(bus, screen, sets):
+    leftFlag = pygame.mouse.get_pressed()[0]
+
+    mouseX, mouseY = pygame.mouse.get_pos()
+
+    if mouseX >= 1265 and mouseX <= 1265 + 113 and mouseY >= 10 and mouseY <= 10 + 41 and bus.state == bus.RUNNING:
+        bus.state = bus.PAUSE
+    else:
+        bus.state = bus.RUNNING

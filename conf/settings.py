@@ -20,6 +20,10 @@ class Setting(object):
         # 提示标语
         self.prepareGrowPlants = pygame.image.load('image/prompt_words/PrepareGrowPlants.png')
         self.finalWave = pygame.image.load('image/prompt_words/FinalWave.gif')
+        # 游戏状态
+        self.Button = pygame.image.load('image/game_state/Button.png')
+        self.Pause = pygame.image.load('image/game_state/Pause.png')
+
         # 普通僵尸
         self.zombie_normalImages = [
             "image/zombie_normal/0.png",
