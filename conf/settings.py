@@ -11,26 +11,62 @@ class Setting(object):
         self.background = pygame.image.load('image/background1.jpg')
         self.seedBank = pygame.image.load('image/SeedBank.png')
         self.sunImage = 'image/sun.png'
+        # 进度条   指示标   终点标
+        self.flagMeterEmpty = pygame.image.load('image/progress_bar/FlagMeterEmpty.png')
+        self.flagMeterFull = pygame.image.load('image/progress_bar/FlagMeterFull.png')
+        self.flagMeterParts1 = pygame.image.load('image/progress_bar/FlagMeterParts1.png')
+        self.flagMeterParts2 = pygame.image.load('image/progress_bar/FlagMeterParts2.png')
+        # 提示标语
+        self.prepareGrowPlants = pygame.image.load('image/prompt_words/PrepareGrowPlants.png')
+        self.finalWave = pygame.image.load('image/prompt_words/FinalWave.gif')
         # 普通僵尸
         self.zombie_normalImages = [
-            "image/zombie_normal/z_00_01.png",
-            "image/zombie_normal/z_00_02.png",
-            "image/zombie_normal/z_00_03.png",
-            "image/zombie_normal/z_00_04.png",
-            "image/zombie_normal/z_00_05.png",
-            "image/zombie_normal/z_00_06.png",
-            "image/zombie_normal/z_00_07.png"
+            "image/zombie_normal/0.png",
+            "image/zombie_normal/1.png",
+            "image/zombie_normal/2.png",
+            "image/zombie_normal/3.png",
+            "image/zombie_normal/4.png",
+            "image/zombie_normal/5.png",
+            "image/zombie_normal/6.png",
+            "image/zombie_normal/7.png",
+            "image/zombie_normal/8.png",
+            "image/zombie_normal/9.png",
+            "image/zombie_normal/10.png",
+            "image/zombie_normal/11.png",
+            "image/zombie_normal/12.png",
+            "image/zombie_normal/13.png",
+            "image/zombie_normal/14.png",
+            "image/zombie_normal/15.png",
+            "image/zombie_normal/16.png",
+            "image/zombie_normal/17.png",
+            "image/zombie_normal/18.png",
+            "image/zombie_normal/19.png",
+            "image/zombie_normal/20.png",
+            "image/zombie_normal/21.png"
         ]
         # 帽子僵尸
         self.zombie_coneheadImages = [
-            "image/zombie_conehead/z_01_01.png",
-            "image/zombie_conehead/z_01_02.png",
-            "image/zombie_conehead/z_01_03.png",
-            "image/zombie_conehead/z_01_04.png",
-            "image/zombie_conehead/z_01_05.png",
-            "image/zombie_conehead/z_01_06.png",
-            "image/zombie_conehead/z_01_07.png",
-            "image/zombie_conehead/z_01_08.png"
+            "image/zombie_conehead/0.png",
+            "image/zombie_conehead/1.png",
+            "image/zombie_conehead/2.png",
+            "image/zombie_conehead/3.png",
+            "image/zombie_conehead/4.png",
+            "image/zombie_conehead/5.png",
+            "image/zombie_conehead/6.png",
+            "image/zombie_conehead/7.png",
+            "image/zombie_conehead/8.png",
+            "image/zombie_conehead/9.png",
+            "image/zombie_conehead/10.png",
+            "image/zombie_conehead/11.png",
+            "image/zombie_conehead/12.png",
+            "image/zombie_conehead/13.png",
+            "image/zombie_conehead/14.png",
+            "image/zombie_conehead/15.png",
+            "image/zombie_conehead/16.png",
+            "image/zombie_conehead/17.png",
+            "image/zombie_conehead/18.png",
+            "image/zombie_conehead/19.png",
+            "image/zombie_conehead/20.png"
         ]
         # 铁桶僵尸
         self.zombie_bucketImages = [

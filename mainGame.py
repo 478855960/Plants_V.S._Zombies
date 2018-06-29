@@ -58,6 +58,9 @@ def paint():
     # 绘制太阳总分数状态
     painter.paintSunScore(bus, screen, sets)
 
+    # 绘制进度条
+    painter.painProgressBar(bus, screen, sets)
+
 
 
 
@@ -97,6 +100,9 @@ def action():
     # 阳光的动作
     actioner.sunAction(bus, screen, sets)
 
+    # 控制全局的时间轴时间增加
+    bus.globalTime += 1
+
 # 走一步
 def stepAction():
     # 僵尸走一步
@@ -128,8 +134,10 @@ def hitAction():
 
 def hit(zb):
     if zb.x == 500:
-        zb.images = sets.normalAttackImages
-
+        if isinstance(zb, Zombie_normal):
+            zb.images = sets.normalAttackImages
+        elif isinstance(zb, Zombie_conehead):
+            zb.images = sets.coneheadAttackImages
 '''
 程序入口
 '''
