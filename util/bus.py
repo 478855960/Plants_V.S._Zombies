@@ -34,15 +34,12 @@ class Bus:
     # 全局统一的时间轴
     globalTime = 0
 
-<<<<<<< HEAD
     # 格子的二维数组
     gridList = [([-1] * 5) for i in range(9)]
-=======
+
     # 游戏状态
     RUNNING = 1
     PAUSE = 2
-
     state = RUNNING
->>>>>>> f5c874743302565164410bb22d3cb16ddb7a0c62
 
     music = None
