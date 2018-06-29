@@ -6,8 +6,13 @@ from entity.plant.sunflower import Sunflower
 from entity.plant.peashooter import Peashooter
 from entity.sun import Sun
 
+from entity.plant.wallnut import Wallnut
 from entity.plant.sunflower import Sunflower
 from entity.plant.peashooter import Peashooter
+from entity.plant.chomper import Chomper
+from entity.plant.cherryBomb import CherryBomb
+from entity.plant.repeater import Repeater
+
 import random
 sets = Setting()
 # 当鼠标被点击时调用函数
@@ -85,12 +90,12 @@ def initPlantsMouseClickListener(bus, screen):
                 Constant.REPEATER_SELECTED: 5,
             }
             plantdict = [
-                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[0])),
+                Wallnut(screen, plantX, plantY, getImages(sets.plantsInitImages[0])),
                 Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[1])),
                 Peashooter(screen, plantX, plantY, getImages(sets.plantsInitImages[2])),
-                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[3])),
-                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[4])),
-                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[5])),
+                Chomper(screen, plantX, plantY, getImages(sets.plantsInitImages[3])),
+                CherryBomb(screen, plantX, plantY, getImages(sets.plantsInitImages[4])),
+                Repeater(screen, plantX, plantY, getImages(sets.plantsInitImages[5])),
             ]
             if bus.cardState == Constant.CARD_CLICKED and bus.cardSelection in imagedict:
                 index = imagedict[bus.cardSelection]

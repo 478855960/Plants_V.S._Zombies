@@ -7,7 +7,6 @@ def getImages(dir):
     imageCounts = 0
     for i in os.listdir(dir):
         imageCounts += 1
-    print(imageCounts)
     images = []
     imageStr = ""
     for j in range(imageCounts):
