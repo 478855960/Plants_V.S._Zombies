@@ -134,7 +134,6 @@ class Setting(object):
             "image/zombie_bucketAttack/8.png",
             "image/zombie_bucketAttack/10.png",
         ]
-        
         # 植物贴图文件夹路径
         self.plantsInitImages = [
             plantsImgDir + 'WallNut/',

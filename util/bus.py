@@ -25,3 +25,5 @@ class Bus:
     # 初始化4个太阳  xx  yy 分别记录太阳的x坐标和y坐标
     # xx = []
     # yy = []
+
+    music = None
