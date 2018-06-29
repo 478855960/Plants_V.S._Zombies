@@ -13,11 +13,6 @@ sets = Setting()
 
 screen = pygame.display.set_mode((1400, 600), 0, 0)
 
-# 僵尸存储列表
-zombies = []
-# 僵尸频率值
-zombieIndex = 0
-
 '''
 paint部分
 '''
@@ -30,7 +25,7 @@ def paint():
 
 # 绘制僵尸
 def paintZombies():
-    for zombie in zombies:
+    for zombie in bus.zombies:
         zombie.blitme()
 
 
@@ -46,27 +41,41 @@ def action():
             mouseListener.cardMouseClickListener(bus)
     stepAction()
     zombiesAction()
+    hitAction()
 
 
 # 走一步
 def stepAction():
     # 僵尸走一步
-    for zombie in zombies:
+    for zombie in bus.zombies:
         zombie.step()
 
 # 僵尸生成
 def zombiesAction():
-    global zombieIndex
-    zombieIndex += 1
+    bus.zombieIndex += 1
 
-    if zombieIndex % 1000 == 0:
+    if bus.zombieIndex % 1000 == 0:
         type = random.randint(0, 20)
         if type < 8:
-            zombies.append(Zombie_conehead(screen, sets.zombie_coneheadImages))
+            bus.zombies.append(Zombie_conehead(screen, sets.zombie_coneheadImages))
         else:
             # 1.存储到列表中
-            zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
+            bus.zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
 
+
+# 碰撞测试
+def hitAction():
+    for zombie in bus.zombies:
+        if zombie.life == 3 and bus.headFlag is True:
+            zombie.images = sets.zombieLostHeadImages
+            screen.blit(sets.zombieHeadImages, (zombie.x, zombie.y))
+            bus.headFlag = False
+        hit(zombie)
+
+
+def hit(zb):
+    if zb.x == 500:
+        zb.images = sets.normalAttackImages
 
 '''
 程序入口
