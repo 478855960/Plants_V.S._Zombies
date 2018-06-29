@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0f9c8296-1774-48db-b12e-dc5a2a23eaac" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/entity/sunflower.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/SunFlower1/0.png" afterDir="false" />
@@ -27,10 +28,184 @@
       <change beforePath="$PROJECT_DIR$/entity/plant.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity/plant.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image/plants/SunFlower/0.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/image/plants/SunFlower/SunFlower.gif" beforeDir="false" />
+=======
+    <list default="true" id="925969b1-f404-4bd5-823b-ff57040c1818" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/actioner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entity/sun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/card/Shovel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/card/ShovelBack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBomb/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/CherryBombBoom/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Chomper/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperAttack/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperDigest/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperDigest/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperDigest/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperDigest/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperDigest/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/ChomperDigest/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Peashooter/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/Repeater/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/SunFlower/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNut/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutBadlyCracked/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/plants/WallNutCracked/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msyh.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/CherryBomb/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/CherryBomb/Boom.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/CherryBomb/CherryBomb.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Chomper/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Chomper/Chomper.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Chomper/ChomperAttack.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Chomper/ChomperDigest.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Peashooter/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Peashooter/Peashooter.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Repeater/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/Repeater/Repeater.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/SunFlower/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/SunFlower/SunFlower.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/SunFlower/SunFlower1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/SunFlower/SunFlower2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/BoomWallNutRoll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/HugeWallNutRoll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/WallNut.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/WallNutRoll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/Wallnut_cracked1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/plants/WallNut/Wallnut_cracked2.gif" beforeDir="false" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
       <change beforePath="$PROJECT_DIR$/mainGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mouseListener.py" beforeDir="false" afterPath="$PROJECT_DIR$/mouseListener.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/painter.py" beforeDir="false" afterPath="$PROJECT_DIR$/painter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/bus.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/bus.py" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/util/constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/constant.py" afterDir="false" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,17 +214,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Plants_V_S__Zombies$loadimages.coverage" NAME="loadimages Coverage Results" MODIFIED="1530239010965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/Plants_V_S__Zombies$mouseListener.coverage" NAME="mouseListener Coverage Results" MODIFIED="1530239172402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Plants_V_S__Zombies$mainGame.coverage" NAME="mainGame Coverage Results" MODIFIED="1530243227719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/Plants_V_S__Zombies$mainGame.coverage" NAME="mainGame Coverage Results" MODIFIED="1530236191852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Plants_V_S__Zombies$actioner.coverage" NAME="actioner Coverage Results" MODIFIED="1530236141917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="mainGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainGame.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="140">
               <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+=======
+            <state relative-caret-position="1316">
+              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
               </folding>
@@ -57,11 +242,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="painter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/painter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="812">
               <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+=======
+      <file leaf-file-name="mouseListener.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mouseListener.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1045">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -69,6 +262,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="bus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/bus.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,6 +277,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
               <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+=======
+      <file leaf-file-name="actioner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actioner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -90,24 +291,41 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="sunflower.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity/sunflower.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
               <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+=======
+      <file leaf-file-name="bus.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/bus.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="constant.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/constant.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+=======
+      <file leaf-file-name="painter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/painter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="loadimages.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/loadimages.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,22 +333,40 @@
               <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
             </state>
           </provider>
+=======
+      <file leaf-file-name="constant.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/constant.py">
+          <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
         </entry>
       </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/settings.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="924">
               <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+=======
+            <state relative-caret-position="955">
+              <caret line="167" column="53" selection-start-line="167" selection-start-column="53" selection-end-line="167" selection-end-column="53" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="plant.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity/plant.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
               <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+=======
+      <file leaf-file-name="sun.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entity/sun.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
             </state>
           </provider>
         </entry>
@@ -144,6 +380,17 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>suns</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>sunFall</replace>
+    </replaceStrings>
+  </component>
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -151,11 +398,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/painter.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/conf/settings.py" />
         <option value="$PROJECT_DIR$/util/bus.py" />
         <option value="$PROJECT_DIR$/mouseListener.py" />
         <option value="$PROJECT_DIR$/util/loadimages.py" />
         <option value="$PROJECT_DIR$/entity/sunflower.py" />
+=======
+        <option value="$PROJECT_DIR$/mouseListener.py" />
+        <option value="$PROJECT_DIR$/entity/sun.py" />
+        <option value="$PROJECT_DIR$/actioner.py" />
+        <option value="$PROJECT_DIR$/conf/settings.py" />
+        <option value="$PROJECT_DIR$/util/bus.py" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
         <option value="$PROJECT_DIR$/mainGame.py" />
       </list>
     </option>
@@ -170,9 +425,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-15" />
+    <option name="y" value="45" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -185,6 +441,14 @@
             <path>
               <item name="Plants_V.S._Zombies" type="b2602c69:ProjectViewProjectNode" />
               <item name="Plants_V.S._Zombies" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+            </path>
+            <path>
+              <item name="Plants_V.S._Zombies" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Plants_V.S._Zombies" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
             </path>
             <path>
               <item name="Plants_V.S._Zombies" type="b2602c69:ProjectViewProjectNode" />
@@ -194,11 +458,14 @@
             <path>
               <item name="Plants_V.S._Zombies" type="b2602c69:ProjectViewProjectNode" />
               <item name="Plants_V.S._Zombies" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Plants_V.S._Zombies" type="b2602c69:ProjectViewProjectNode" />
               <item name="Plants_V.S._Zombies" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -209,9 +476,23 @@
       <pane id="Scope" />
     </panes>
   </component>
+<<<<<<< HEAD
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PythonProject\Plants_V.S._Zombies\image\plants\SunFlower" />
+=======
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UT" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonProject\Plants_V.S._Zombies" />
+      <recent name="D:\pythonProject\Plants V.S. Zombies" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
     </key>
   </component>
   <component name="RunDashboard">
@@ -227,7 +508,11 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.mainGame">
+<<<<<<< HEAD
     <configuration name="loadimages" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="actioner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
       <module name="Plants V.S. Zombies" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -235,12 +520,20 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/loadimages.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/actioner.py" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,6 +558,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="mouseListener" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Plants V.S. Zombies" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -288,12 +582,21 @@
       <item itemvalue="Python.mainGame" />
       <item itemvalue="Python.mouseListener" />
       <item itemvalue="Python.loadimages" />
+=======
+    <list>
+      <item itemvalue="Python.mainGame" />
+      <item itemvalue="Python.actioner" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.mainGame" />
+<<<<<<< HEAD
         <item itemvalue="Python.mouseListener" />
         <item itemvalue="Python.loadimages" />
+=======
+        <item itemvalue="Python.actioner" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
       </list>
     </recent_temporary>
   </component>
@@ -315,13 +618,21 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067025" side_tool="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281027" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18364611" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.3281471" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14410187" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -363,19 +674,93 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainGame.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="896">
           <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
+=======
+        <state relative-caret-position="1558">
+          <caret line="82" column="21" lean-forward="true" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mouseListener.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/bus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/painter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/constant.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/sun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actioner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3266">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="252">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
@@ -385,22 +770,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
           <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+=======
+        <state relative-caret-position="253">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/sun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainGame.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="672">
           <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
+=======
+        <state relative-caret-position="552">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="252">
+=======
+        <state relative-caret-position="207">
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
           <caret line="9" column="63" lean-forward="true" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
         </state>
       </provider>
@@ -419,17 +826,50 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://G:/zombie/zombie.py" />
-    <entry file="file://$PROJECT_DIR$/image/background1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/image/plants/SunFlower/SunFlower1/0.png">
+    <entry file="file://$PROJECT_DIR$/image/tiger.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/settings.py">
+    <entry file="file://$PROJECT_DIR$/image/SunBank.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/sun.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/background1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/sun_flower1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/image/plants/SunFlower/SunFlower1/0.png">
+      <provider selected="true" editor-type-id="images" />
+=======
+    <entry file="file://$PROJECT_DIR$/image/start_over.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/start_leave.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/WaterMark.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Zombie_digger_pickaxe.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/allseeds.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/constant.py">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
+    </entry>
+    <entry file="file://$PROJECT_DIR$/painter.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="924">
           <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
         </state>
@@ -446,31 +886,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
           <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+=======
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/sun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mouseListener.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+        <state relative-caret-position="1045">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/mouseListener.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/actioner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/util/loadimages.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/conf/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="167" column="53" selection-start-line="167" selection-start-column="53" selection-end-line="167" selection-end-column="53" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity/plant.py">
+    <entry file="file://$PROJECT_DIR$/util/bus.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="476">
           <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
         </state>
@@ -487,15 +960,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+=======
+        <state relative-caret-position="494">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainGame.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="140">
           <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
+=======
+        <state relative-caret-position="1316">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> bf9c94320ff7d2d1eb1e87327759afd6d3b43415
           </folding>
         </state>
       </provider>

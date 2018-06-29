@@ -13,3 +13,22 @@ class Bus:
 
     # 表示当前需要绘制的图片
     paintPlants = []
+
+    # 僵尸存储列表
+    zombies = []
+    # 僵尸频率值
+    zombieIndex = 0
+    # 掉头信号
+    headFlag = True
+
+    # 存放正在下落太阳的列表
+    sunFall = []
+    # 存放已经停止的太阳的列表
+    sunStay = []
+    # 记录太阳数的
+    sunScore = 100
+    # 初始化4个太阳  xx  yy 分别记录太阳的x坐标和y坐标
+    # xx = []
+    # yy = []
+
+    music = None

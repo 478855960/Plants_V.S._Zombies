@@ -27,6 +27,6 @@ class Zombie_bucket(ZombieObject):
         self.x -= 0.5
         # 2.更改图片
         self.index += 1
-        ix = self.index / 8 % len(self.images)
+        ix = self.index / len(self.images) % len(self.images)
         # 设置图片
         self.image = pygame.image.load(self.images[int(ix)])

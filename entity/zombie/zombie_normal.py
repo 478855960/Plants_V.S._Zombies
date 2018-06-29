@@ -22,5 +22,5 @@ class Zombie_normal(ZombieObject):
     def step(self):
         self.x -= 0.5
         self.index += 1
-        ix = self.index / 7 % len(self.images)
+        ix = self.index / len(self.images) % len(self.images)
         self.image = pygame.image.load(self.images[int(ix)])
