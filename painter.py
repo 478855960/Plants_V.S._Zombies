@@ -1,5 +1,6 @@
 from util.constant import Constant
 import pygame
+from  pygame.locals import *
 
 # 卡片图标鼠标跟随绘制
 def cardMovePaint(bus, screen, sets):
@@ -33,6 +34,7 @@ def initScenario(bus, screen, sets):
     screen.blit(sets.cardShovel, (444, 10))
 
 
+
 # 绘制太阳，包括在正在下落的和在地上的
 def paintSun(bus, screen, sets):
     for i in range(len(bus.sunFall)):
@@ -50,3 +52,32 @@ def paintSunScore(bus, screen, sets):
         screen.blit(scoreStr, (19, 59))
     else:
         screen.blit(scoreStr, (17, 59))
+
+
+# 绘制进度条
+def painProgressBar(bus, screen, sets):
+    # 绘制进度条
+    percentage = bus.globalTime / 100
+
+    # 绘制开始提示标语
+    if percentage <= 2 and percentage >= 1:
+        screen.blit(sets.prepareGrowPlants.subsurface(Rect((0, 0), (255, 112))), (550, 240))
+
+    if percentage >= 2 and percentage <= 3:
+        screen.blit(sets.prepareGrowPlants.subsurface(Rect((0, 112), (255, 100))), (550, 240))
+
+    if percentage >= 3 and percentage <= 4:
+        screen.blit(sets.prepareGrowPlants.subsurface(Rect((0, 212), (255, 112))), (550, 240))
+
+    # 绘制最后一波提示语
+    if percentage >= 99 and percentage <= 100:
+        screen.blit(sets.finalWave, (550, 240))
+
+
+    screen.blit(sets.flagMeterFull, (1200, 560))
+
+    if percentage <= 157:
+        screen.blit(sets.flagMeterEmpty.subsurface(Rect((0, 0), (157 - percentage, 21))), (1200, 560))
+        screen.blit(sets.flagMeterParts1, (1340 - percentage, 560))
+
+    screen.blit(sets.flagMeterParts2, (1205, 557))
