@@ -58,6 +58,9 @@ def paint():
     # 绘制太阳总分数状态
     painter.paintSunScore(bus, screen, sets)
 
+    # 绘制进度条
+    painter.painProgressBar(bus, screen, sets)
+
 
 
 
@@ -96,6 +99,9 @@ def action():
     hitAction()
     # 阳光的动作
     actioner.sunAction(bus, screen, sets)
+
+    # 控制全局的时间轴时间增加
+    bus.globalTime += 1
 
 # 走一步
 def stepAction():

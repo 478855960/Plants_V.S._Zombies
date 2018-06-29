@@ -11,6 +11,14 @@ class Setting(object):
         self.background = pygame.image.load('image/background1.jpg')
         self.seedBank = pygame.image.load('image/SeedBank.png')
         self.sunImage = 'image/sun.png'
+        # 进度条   指示标   终点标
+        self.flagMeterEmpty = pygame.image.load('image/progress_bar/FlagMeterEmpty.png')
+        self.flagMeterFull = pygame.image.load('image/progress_bar/FlagMeterFull.png')
+        self.flagMeterParts1 = pygame.image.load('image/progress_bar/FlagMeterParts1.png')
+        self.flagMeterParts2 = pygame.image.load('image/progress_bar/FlagMeterParts2.png')
+        # 提示标语
+        self.prepareGrowPlants = pygame.image.load('image/prompt_words/PrepareGrowPlants.png')
+        self.finalWave = pygame.image.load('image/prompt_words/FinalWave.gif')
         # 普通僵尸
         self.zombie_normalImages = [
             "image/zombie_normal/z_00_01.png",
