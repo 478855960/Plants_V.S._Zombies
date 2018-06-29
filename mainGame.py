@@ -70,7 +70,6 @@ def paintZombies():
 # 绘制植物
 def paintPlants():
     for plant in bus.paintPlants:
-        plant.step()
         plant.blitme()
 
 '''
@@ -102,11 +101,15 @@ def action():
         bus.globalTime += 1
 
 
+        for plant in bus.paintPlants:
+            plant.step()
+
+
 # 走一步
 def stepAction():
     # 僵尸走一步
     for zombie in bus.zombies:
-        zombie.step()
+        zombie.step(sets)
 
 
 # 僵尸生成

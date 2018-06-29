@@ -30,7 +30,7 @@ class ZombieObject(object):
         pass
 
     @abc.abstractmethod
-    def step(self):
+    def step(self, sets):
         pass
 
     # 绘图方法

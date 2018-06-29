@@ -1,7 +1,6 @@
 import pygame
 from entity.zombie.zombieObject import ZombieObject
 import random
-from conf.settings import Setting
 
 
 class Zombie_normal(ZombieObject):
@@ -20,8 +19,8 @@ class Zombie_normal(ZombieObject):
     def outOfBounds(self):
         pass
 
-    def step(self):
-        if self.images == Setting().zombie_normalImages:
+    def step(self, sets):
+        if self.images == sets.zombie_normalImages:
             self.x -= 1
         self.index += 1
         ix = self.index / (len(self.images)/2) % len(self.images)
