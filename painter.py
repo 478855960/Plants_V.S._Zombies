@@ -24,12 +24,33 @@ def initScenario(bus, screen, sets):
     screen.blit(sets.seedBank, (0, 0))
     # 绘制卡片
     CARD_OFFSET = 60
-    screen.blit(sets.cardNutWall, (80, 10))
-    screen.blit(sets.sunflower, (80 + CARD_OFFSET * 1, 10))
-    screen.blit(sets.cardPeashooter, (80 + CARD_OFFSET * 2, 10))
-    screen.blit(sets.chomper, (80 + CARD_OFFSET * 3, 10))
-    screen.blit(sets.cherry, (80 + CARD_OFFSET * 4, 10))
-    screen.blit(sets.cardPeashooterdouble, (80 + CARD_OFFSET * 5, 10))
+    dict = {
+        0: sets.cardNutWall,
+        1: sets.sunflower,
+        2: sets.cardPeashooter,
+        3: sets.chomper,
+        4: sets.cherry,
+        5: sets.cardPeashooterdouble
+    }
+    dictDark = {
+        0: sets.cardNutWallDark,
+        1: sets.sunflowerDark,
+        2: sets.cardPeashooterDark,
+        3: sets.chomperDark,
+        4: sets.cherryDark,
+        5: sets.cardPeashooterdoubleDark
+    }
+    for i in range(6):
+        if i <= 1 and bus.sunScore >= 50:
+            screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
+        elif  1 < i <= 2 and bus.sunScore >= 100:
+            screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
+        elif 2 < i <= 4 and bus.sunScore >= 150:
+            screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
+        elif 4 < i <= 5 and bus.sunScore >= 200:
+            screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
+        else:
+            screen.blit(dictDark[i], (80 + CARD_OFFSET * i, 10))
     screen.blit(sets.cardShovelBack, (448, 0))
     screen.blit(sets.cardShovel, (444, 10))
 

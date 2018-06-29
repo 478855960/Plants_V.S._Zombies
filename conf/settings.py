@@ -8,6 +8,7 @@ plantsImgDir = 'image/plants/'
 
 class Setting(object):
     def __init__(self):
+        pygame.display.init()
         self.background = pygame.image.load('image/background1.jpg')
         self.seedBank = pygame.image.load('image/SeedBank.png')
         self.sunImage = 'image/sun.png'
@@ -233,6 +234,13 @@ class Setting(object):
         self.cardShovelBack = pygame.image.load('image/card/ShovelBack.png')
         self.cardShovel = pygame.image.load('image/card/Shovel.png')
 
+        self.cardNutWallDark = pygame.image.load('image/card/nutdark.png')
+        self.cardPeashooterDark = pygame.image.load('image/card/peashooterdark.png')
+        self.cherryDark = pygame.image.load('image/card/cherrydark.png')
+        self.chomperDark = pygame.image.load('image/card/chomperdark.png')
+        self.sunflowerDark = pygame.image.load('image/card/sunflowerdark.png')
+        self.cardPeashooterdoubleDark = pygame.image.load('image/card/peashooterdoubledark.png')
+
         # 卡片图片缩放
         self.cardNutWall = pygame.transform.scale(self.cardNutWall, (55,68))
         self.cardPeashooter = pygame.transform.scale(self.cardPeashooter, (55, 68))
@@ -242,6 +250,13 @@ class Setting(object):
         self.cardPeashooterdouble = pygame.transform.scale(self.cardPeashooterdouble, (55, 68))
         self.cardShovelBack = pygame.transform.scale(self.cardShovelBack, (70,86))
         self.cardShovel = pygame.transform.scale(self.cardShovel, (55,55))
+
+        self.cardNutWallDark = pygame.transform.scale(self.cardNutWallDark, (55, 68))
+        self.cardPeashooterDark = pygame.transform.scale(self.cardPeashooterDark, (55, 68))
+        self.cherryDark = pygame.transform.scale(self.cherryDark, (55, 68))
+        self.chomperDark = pygame.transform.scale(self.chomperDark, (55, 68))
+        self.sunflowerDark = pygame.transform.scale(self.sunflowerDark, (55, 68))
+        self.cardPeashooterdoubleDark = pygame.transform.scale(self.cardPeashooterdoubleDark, (55, 68))
 
         #图片旋转
         self.cardShovel = pygame.transform.rotate(self.cardShovel, 45)
