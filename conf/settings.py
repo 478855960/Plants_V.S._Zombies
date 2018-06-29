@@ -176,9 +176,39 @@ class Setting(object):
             "image/zombie_bucketAttack/6.png",
             "image/zombie_bucketAttack/7.png",
             "image/zombie_bucketAttack/8.png",
-            "image/zombie_bucketAttack/8.png",
-            "image/zombie_bucketAttack/10.png",
+            "image/zombie_bucketAttack/9.png",
+            "image/zombie_bucketAttack/10.png"
         ]
+
+        # 僵尸死掉
+        self.zombieDieImages = [
+            "image/zombieDie/0.png",
+            "image/zombieDie/1.png",
+            "image/zombieDie/2.png",
+            "image/zombieDie/3.png",
+            "image/zombieDie/4.png",
+            "image/zombieDie/5.png",
+            "image/zombieDie/6.png",
+            "image/zombieDie/7.png",
+            "image/zombieDie/8.png",
+            "image/zombieDie/9.png"
+        ]
+
+        # 掉头僵尸碰撞图片
+        self.zombieLostHeadAttackImages = [
+            "image/zombieLostHeadAttack/0.png",
+            "image/zombieLostHeadAttack/1.png",
+            "image/zombieLostHeadAttack/2.png",
+            "image/zombieLostHeadAttack/3.png",
+            "image/zombieLostHeadAttack/4.png",
+            "image/zombieLostHeadAttack/5.png",
+            "image/zombieLostHeadAttack/6.png",
+            "image/zombieLostHeadAttack/7.png",
+            "image/zombieLostHeadAttack/8.png",
+            "image/zombieLostHeadAttack/9.png",
+            "image/zombieLostHeadAttack/10.png"
+        ]
+
 
         # 植物贴图文件夹路径
         self.plantsInitImages = [

@@ -82,6 +82,8 @@ def paintPlants():
 '''
 action部分
 '''
+
+
 # 业务逻辑主函数
 def action():
 
@@ -103,11 +105,13 @@ def action():
     # 控制全局的时间轴时间增加
     bus.globalTime += 1
 
+
 # 走一步
 def stepAction():
     # 僵尸走一步
     for zombie in bus.zombies:
         zombie.step()
+
 
 # 僵尸生成
 def zombiesAction():
@@ -125,23 +129,32 @@ def zombiesAction():
 # 碰撞测试
 def hitAction():
     for zombie in bus.zombies:
+        if not isinstance(zombie, Zombie_normal):
+            if zombie.life == 5:
+                zombie.images = sets.zombie_normalImages
         if zombie.life == 3 and bus.headFlag is True:
             zombie.images = sets.zombieLostHeadImages
             screen.blit(sets.zombieHeadImages, (zombie.x, zombie.y))
             bus.headFlag = False
+        elif zombie.life == 0:
+            bus.zombies(zombie)
+            screen.blit(sets.zombieDieImages, (zombie.x, zombie.y))
+
         hit(zombie)
 
 
 def hit(zb):
     if zb.x == 500:
-        if isinstance(zb, Zombie_normal):
-            zb.images = sets.normalAttackImages
-        elif isinstance(zb, Zombie_conehead):
-            zb.images = sets.coneheadAttackImages
+        if zb.life <= 3:
+            zb.images = sets.zombieLostHeadAttackImages
+        else:
+            if isinstance(zb, Zombie_normal):
+                zb.images = sets.normalAttackImages
+            elif isinstance(zb, Zombie_conehead):
+                zb.images = sets.coneheadAttackImages
 '''
 程序入口
 '''
-
 
 
 def main():
