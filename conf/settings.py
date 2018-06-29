@@ -47,10 +47,10 @@ class Setting(object):
         # 植物贴图文件夹路径
         self.plantsInitImages = [
             plantsImgDir + 'WallNut/',
-            plantsImgDir + 'CherryBomb/',
-            plantsImgDir + 'Chomper/',
-            plantsImgDir + 'Peashooter/',
             plantsImgDir + 'SunFlower/',
+            plantsImgDir + 'Peashooter/',
+            plantsImgDir + 'Chomper/',
+            plantsImgDir + 'CherryBomb/',
             plantsImgDir + 'Repeater/'
         ]
         self.peashooterImg = plantsImgDir + 'Peashooter/'
