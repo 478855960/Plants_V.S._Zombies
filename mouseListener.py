@@ -70,12 +70,13 @@ def initPlantsMouseClickListener(bus, screen):
     leftButtonDown = pygame.mouse.get_pressed()[0]
     if leftButtonDown:
         mouseX, mouseY = pygame.mouse.get_pos()
+        gridX = getGridX(mouseX)
+        gridY = int((mouseY - sets.topY) / sets.gridHeight)
+        plantX = sets.gridXIndexes[gridX]
+        plantY = sets.topY + sets.gridHeight * gridY
         if mouseX >= sets.leftX and mouseX <= sets.rightX \
-            and mouseY <= sets.bottomY and mouseY >= sets.topY:
-            gridX = getGridX(mouseX)
-            gridY = int((mouseY - sets.topY) / sets.gridHeight)
-            plantX = sets.gridXIndexes[gridX]
-            plantY = sets.topY + sets.gridHeight * gridY
+            and mouseY <= sets.bottomY and mouseY >= sets.topY \
+                    and bus.gridList[gridX][gridY] == -1:
             imagedict = {
                 Constant.NUT_SELECTED: 0,
                 Constant.SUNFLOWER_SELECTED: 1,
@@ -97,6 +98,7 @@ def initPlantsMouseClickListener(bus, screen):
                 bus.paintPlants.append(plantdict[index])
                 bus.cardState = Constant.CARD_NOT_CLICKED
                 bus.sunScore -= plantdict[index].sunshine
+                bus.gridList[gridX][gridY] = index
 
 def sunMouseClickListener(bus, screen, sets):
         # 获取列表  中左键   返回 True  False

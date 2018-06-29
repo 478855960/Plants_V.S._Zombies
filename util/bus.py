@@ -34,6 +34,7 @@ class Bus:
     # 全局统一的时间轴
     globalTime = 0
 
-
+    # 格子的二维数组
+    gridList = [([-1] * 5) for i in range(9)]
 
     music = None
