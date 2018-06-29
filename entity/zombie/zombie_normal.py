@@ -1,6 +1,7 @@
 import pygame
 from entity.zombie.zombieObject import ZombieObject
 import random
+from conf.settings import Setting
 
 
 class Zombie_normal(ZombieObject):
@@ -20,8 +21,8 @@ class Zombie_normal(ZombieObject):
         pass
 
     def step(self):
-        if self.x > 500:
-            self.x -= 0.5
+        if self.images == Setting().zombie_normalImages:
+            self.x -= 1
         self.index += 1
         ix = self.index / (len(self.images)/2) % len(self.images)
         self.image = pygame.image.load(self.images[int(ix)])

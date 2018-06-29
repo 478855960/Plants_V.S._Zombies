@@ -20,7 +20,6 @@ bus.music = MusicPlayer()
 bus.music.play()
 
 
-
 def initSun():
     for i in range(4):
         xx = random.randint(260, 880)
@@ -135,14 +134,22 @@ def hitAction():
 
 
 def hit(zb):
-    if zb.x == 500:
-        if zb.life <= 3:
-            zb.images = sets.zombieLostHeadAttackImages
-        else:
-            if isinstance(zb, Zombie_normal):
+    hitIndex = -1
+    for i in range(len(bus.paintPlants)):
+        plant = bus.paintPlants[i]
+        if plant.x + plant.width == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
+            if isinstance(zb,Zombie_normal):
                 zb.images = sets.normalAttackImages
             elif isinstance(zb, Zombie_conehead):
                 zb.images = sets.coneheadAttackImages
+            else:
+                zb.images = sets.bucketAttackImages
+            plant.life -= 1
+
+
+# 判断僵尸遇到的碰撞类型 子弹或植物
+def meet(zb):
+    pass
 '''
 程序入口
 '''

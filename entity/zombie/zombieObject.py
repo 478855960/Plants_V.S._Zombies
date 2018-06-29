@@ -36,13 +36,3 @@ class ZombieObject(object):
     # 绘图方法
     def blitme(self):
         self.screen.blit(self.image, (self.x, self.y))
-
-    # 僵尸与植物碰撞
-    def hitBy(self, zb):
-        # 获取僵尸的坐标值
-        zbX = zb.x
-        # 获取植物的坐标值
-        plXW = self.x + self.width
-
-        # 返回判断值
-        return zbX == 500
