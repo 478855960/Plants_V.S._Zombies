@@ -42,17 +42,27 @@ class Setting(object):
             "image/zombie_bucket/z_02_07.png",
             "image/zombie_bucket/z_02_08.png"
         ]
-        self.peashooterImg = pygame.image.load(plantsImgDir + 'Peashooter/Peashooter.gif')
-        self.cherryBombImg = pygame.image.load(plantsImgDir + 'CherryBomb/CherryBomb.gif')
-        self.cherryBombBoomImg = pygame.image.load(plantsImgDir + 'CherryBomb/Boom.gif')
-        self.chomperImg = pygame.image.load(plantsImgDir + 'Chomper/Chomper.gif')
-        self.chomperAttackImg = pygame.image.load(plantsImgDir + 'Chomper/ChomperAttack.gif')
-        self.chomperDigestImg = pygame.image.load(plantsImgDir + 'Chomper/ChomperDigest.gif')
-        self.sunFlowerImg = pygame.image.load(plantsImgDir + 'SunFlower/SunFlower.gif')
-        self.wallNutImg = pygame.image.load(plantsImgDir + 'WallNut/WallNut.gif')
-        self.wallNutCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked1.gif')
-        self.wallNutBadlyCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked2.gif')
-        self.repeaterImg = pygame.image.load(plantsImgDir + 'Repeater/Repeater.gif')
+
+        # 植物贴图文件夹路径
+        self.plantsInitImages = [
+            plantsImgDir + 'WallNut/',
+            plantsImgDir + 'CherryBomb/',
+            plantsImgDir + 'Chomper/',
+            plantsImgDir + 'Peashooter/',
+            plantsImgDir + 'SunFlower/',
+            plantsImgDir + 'Repeater/'
+        ]
+        self.peashooterImg = plantsImgDir + 'Peashooter/'
+        self.cherryBombImg = plantsImgDir + 'CherryBomb/'
+        self.cherryBombBoomImg = plantsImgDir + 'CherryBombBoom/'
+        self.chomperImg = plantsImgDir + 'Chomper/'
+        self.chomperAttackImg = plantsImgDir + 'ChomperAttack/'
+        self.chomperDigestImg = plantsImgDir + 'ChomperDigest/'
+        self.sunFlowerImg = plantsImgDir + 'SunFlower/'
+        self.wallNutImg = plantsImgDir + 'WallNut/'
+        self.wallNutCrackedImg = plantsImgDir + 'WallNutCracked/'
+        self.wallNutBadlyCrackedImg = plantsImgDir + 'WallNutBadlyCracked/'
+        self.repeaterImg = plantsImgDir + 'Repeater/'
 
         # 加载卡片路径
         self.cardNutWall = pygame.image.load('image/card/nutWall.png')
