@@ -34,6 +34,10 @@ class Bus:
     # 全局统一的时间轴
     globalTime = 0
 
+    # 游戏状态
+    RUNNING = 1
+    PAUSE = 2
 
+    state = RUNNING
 
     music = None
