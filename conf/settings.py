@@ -10,6 +10,7 @@ class Setting(object):
     def __init__(self):
         self.background = pygame.image.load('image/background1.jpg')
         self.seedBank = pygame.image.load('image/SeedBank.png')
+        self.sunImage = 'image/sun.png'
         # 普通僵尸
         self.zombie_normalImages = [
             "image/zombie_normal/z_00_01.png",
