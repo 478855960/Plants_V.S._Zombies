@@ -9,7 +9,8 @@ def cardMovePaint(bus, screen, sets):
             Constant.PEASHOOTER_SELECTED: 2,
             Constant.CHOMPER_SELECTED: 3,
             Constant.CHERRY_SELECTED: 4,
-            Constant.REPEATER_SELECTED: 5
+            Constant.REPEATER_SELECTED: 5,
+            Constant.SHOVEL_SELECTED: 6
         }
         drawImgIdx = dict[bus.cardSelection]
         mousex, mousey = pygame.mouse.get_pos()
@@ -46,3 +47,5 @@ def paintSunScore(bus, screen, sets):
         screen.blit(scoreStr, (19, 59))
     else:
         screen.blit(scoreStr, (17, 59))
+    screen.blit(sets.cardShovelBack, (448, 0))
+    screen.blit(sets.cardShovel, (444, 10))

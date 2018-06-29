@@ -12,3 +12,4 @@ class Constant:
     PEASHOOTER_SELECTED = 6  # 选择了豌豆射手卡片
     SUNFLOWER_SELECTED = 7  # 选择了太阳花卡片
     REPEATER_SELECTED = 8  # 选择了豌豆射手double卡片
+    SHOVEL_SELECTED = 9  # 选择了铲子卡片
