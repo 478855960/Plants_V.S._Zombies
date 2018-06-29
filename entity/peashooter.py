@@ -13,6 +13,7 @@ class Peashooter(Plant):
         self.image = pygame.image.load(self.images[0])
         self.width = 0
         self.height = 0
+        super(Peashooter, self).__init__(screen, self.x, self.y, self.image)
         # step要用到的index
         self.index = 0
 

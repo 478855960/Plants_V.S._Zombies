@@ -134,7 +134,7 @@ class Setting(object):
             "image/zombie_bucketAttack/8.png",
             "image/zombie_bucketAttack/10.png",
         ]
-        
+
         # 植物贴图文件夹路径
         self.plantsInitImages = [
             plantsImgDir + 'WallNut/',
@@ -189,3 +189,6 @@ class Setting(object):
             pygame.image.load('image/mouseMoveCard/repeater.gif'),
             self.cardShovel
         ]
+
+        # 子弹
+        bulletImg = 'image/bullet_01.png'
