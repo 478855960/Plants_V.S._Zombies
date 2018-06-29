@@ -4,6 +4,7 @@ import pygame
 
 from util.loadimages import getImages
 from entity.sunflower import Sunflower
+from entity.peashooter import Peashooter
 from entity.sun import Sun
 import random
 sets = Setting()
@@ -37,17 +38,37 @@ def cardMouseClickListener(bus):
     if rightButtonDown:
         bus.cardState = Constant.CARD_NOT_CLICKED
 
+# 用来判断格子的X坐标（即鼠标点击在第几列的格子里）
+def getGridX(mouseX):
+    if mouseX < sets.gridXIndexes[0]:
+        return -1
+    for i in range(len(sets.gridXIndexes)):
+        if mouseX <= sets.gridXIndexes[i]:
+            return i - 1
+    return -1
+
 # 用来绑定卡片监听事件
 def initPlantsMouseClickListener(bus, screen):
     leftButtonDown = pygame.mouse.get_pressed()[0]
     if leftButtonDown:
-        mousex, mousey = pygame.mouse.get_pos()
-        if bus.cardState == Constant.CARD_CLICKED:
-            if bus.cardSelection == Constant.SUNFLOWER_SELECTED:
-                imgsPath = sets.initPlantsImg[1]
-                imgs = getImages(imgsPath)
-                sunflower = Sunflower(screen, mousex, mousey, imgs)
-                bus.paintPlants.append(sunflower)
+        mouseX, mouseY = pygame.mouse.get_pos()
+        if mouseX >= sets.leftX and mouseX <= sets.rightX \
+            and mouseY <= sets.bottomY and mouseY >= sets.topY:
+            gridX = getGridX(mouseX)
+            gridY = int((mouseY - sets.topY) / sets.gridHeight)
+            plantX = sets.gridXIndexes[gridX]
+            plantY = sets.topY + sets.gridHeight * gridY
+            if bus.cardState == Constant.CARD_CLICKED:
+                if bus.cardSelection == Constant.SUNFLOWER_SELECTED:
+                    imgsPath = sets.plantsInitImages[1]
+                    imgs = getImages(imgsPath)
+                    sunflower = Sunflower(screen, plantX, plantY, imgs)
+                    bus.paintPlants.append(sunflower)
+                elif bus.cardSelection == Constant.PEASHOOTER_SELECTED:
+                    imgsPath = sets.plantsInitImages[2]
+                    imgs = getImages(imgsPath)
+                    peashooter = Peashooter(screen, plantX, plantY, imgs)
+                    bus.paintPlants.append(peashooter)
 
 def sunMouseClickListener(bus, screen, sets):
         # 获取列表  中左键   返回 True  False
