@@ -4,6 +4,7 @@ from entity.zombie.zombie_bucket import Zombie_bucket
 from entity.zombie.zombie_conehead import Zombie_conehead
 from entity.zombie.zombie_normal import Zombie_normal
 from util.constant import Constant
+from musicplayer import MusicPlayer
 from entity.sun import Sun
 from util.bus import Bus
 import mouseListener
@@ -14,11 +15,11 @@ bus = Bus()
 sets = Setting()
 
 screen = pygame.display.set_mode((1400, 600), 0, 0)
+bus.music = MusicPlayer()
 
-# 僵尸存储列表
-zombies = []
-# 僵尸频率值
-zombieIndex = 0
+bus.music.play()
+
+
 
 def initSun():
     for i in range(4):

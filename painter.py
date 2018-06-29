@@ -28,6 +28,8 @@ def initScenario(bus, screen, sets):
     screen.blit(sets.chomper, (80 + CARD_OFFSET * 3, 10))
     screen.blit(sets.cherry, (80 + CARD_OFFSET * 4, 10))
     screen.blit(sets.cardPeashooterdouble, (80 + CARD_OFFSET * 5, 10))
+    screen.blit(sets.cardShovelBack, (448, 0))
+    screen.blit(sets.cardShovel, (444, 10))
 
 
 # 绘制太阳，包括在正在下落的和在地上的
@@ -47,5 +49,3 @@ def paintSunScore(bus, screen, sets):
         screen.blit(scoreStr, (19, 59))
     else:
         screen.blit(scoreStr, (17, 59))
-    screen.blit(sets.cardShovelBack, (448, 0))
-    screen.blit(sets.cardShovel, (444, 10))
