@@ -10,6 +10,7 @@ class Setting(object):
     def __init__(self):
         self.background = pygame.image.load('image/background1.jpg')
         self.seedBank = pygame.image.load('image/SeedBank.png')
+        self.sunImage = 'image/sun.png'
         # 普通僵尸
         self.zombie_normalImages = [
             "image/zombie_normal/z_00_01.png",
@@ -145,6 +146,27 @@ class Setting(object):
         self.wallNutBadlyCrackeImg = pygame.image.load(plantsImgDir + 'WallNut/Wallnut_cracked2.gif')
         self.repeaterImg = pygame.image.load(plantsImgDir + 'Repeater/Repeater.gif')
 
+        # 植物贴图文件夹路径
+        self.plantsInitImages = [
+            plantsImgDir + 'WallNut/',
+            plantsImgDir + 'SunFlower/',
+            plantsImgDir + 'Peashooter/',
+            plantsImgDir + 'Chomper/',
+            plantsImgDir + 'CherryBomb/',
+            plantsImgDir + 'Repeater/'
+        ]
+        self.peashooterImg = plantsImgDir + 'Peashooter/'
+        self.cherryBombImg = plantsImgDir + 'CherryBomb/'
+        self.cherryBombBoomImg = plantsImgDir + 'CherryBombBoom/'
+        self.chomperImg = plantsImgDir + 'Chomper/'
+        self.chomperAttackImg = plantsImgDir + 'ChomperAttack/'
+        self.chomperDigestImg = plantsImgDir + 'ChomperDigest/'
+        self.sunFlowerImg = plantsImgDir + 'SunFlower/'
+        self.wallNutImg = plantsImgDir + 'WallNut/'
+        self.wallNutCrackedImg = plantsImgDir + 'WallNutCracked/'
+        self.wallNutBadlyCrackedImg = plantsImgDir + 'WallNutBadlyCracked/'
+        self.repeaterImg = plantsImgDir + 'Repeater/'
+
         # 加载卡片路径
         self.cardNutWall = pygame.image.load('image/card/nutWall.png')
         self.cardPeashooter = pygame.image.load('image/card/peashooter.png')
@@ -152,6 +174,8 @@ class Setting(object):
         self.chomper = pygame.image.load('image/card/chomper.png')
         self.sunflower = pygame.image.load('image/card/sunflower.png')
         self.cardPeashooterdouble = pygame.image.load('image/card/peashooterdouble.png')
+        self.cardShovelBack = pygame.image.load('image/card/ShovelBack.png')
+        self.cardShovel = pygame.image.load('image/card/Shovel.png')
 
         # 卡片图片缩放
         self.cardNutWall = pygame.transform.scale(self.cardNutWall, (55,68))
@@ -160,6 +184,11 @@ class Setting(object):
         self.chomper = pygame.transform.scale(self.chomper, (55, 68))
         self.sunflower = pygame.transform.scale(self.sunflower, (55, 68))
         self.cardPeashooterdouble = pygame.transform.scale(self.cardPeashooterdouble, (55, 68))
+        self.cardShovelBack = pygame.transform.scale(self.cardShovelBack, (70,86))
+        self.cardShovel = pygame.transform.scale(self.cardShovel, (55,55))
+
+        #图片旋转
+        self.cardShovel = pygame.transform.rotate(self.cardShovel, 45)
 
         # 卡片点击图片集合
         self.cardImgs = [
@@ -168,5 +197,6 @@ class Setting(object):
             pygame.image.load('image/mouseMoveCard/mousepeashooter.gif'),
             pygame.image.load('image/mouseMoveCard/mouseChomper.gif'),
             pygame.image.load('image/mouseMoveCard/mouseCherry.gif'),
-            pygame.image.load('image/mouseMoveCard/repeater.gif')
+            pygame.image.load('image/mouseMoveCard/repeater.gif'),
+            self.cardShovel
         ]
