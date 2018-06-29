@@ -23,7 +23,19 @@ def cardMouseClickListener(bus):
         CARD_WIDTH = 55
         CARD_OFFSET = 60
         # i --> 0-坚果 1-向日葵 2-豌豆射手 3-食人花 4-樱桃炸弹 5-豌豆射手double
-        for i in range(7):
+        # 设置count循环次数 控制暗色植物不能点击
+        rangeCount = 0
+        if 50 <= bus.sunScore < 100:
+            rangeCount = 2
+        elif 100 <= bus.sunScore < 150:
+            rangeCount = 3
+        elif 150 <= bus.sunScore < 200:
+            rangeCount = 5
+        else:
+            rangeCount = 6
+
+        # 选择卡片
+        for i in range(rangeCount):
             if CARD_BASIC_X + CARD_OFFSET * i < mousex < CARD_BASIC_X + CARD_WIDTH + CARD_OFFSET * i and \
                     CARD_BASIC_Y < mousey < CARD_BASIC_Y + CARD_HEIGHT:
                 dict = {
@@ -33,10 +45,14 @@ def cardMouseClickListener(bus):
                     3: Constant.CHOMPER_SELECTED,
                     4: Constant.CHERRY_SELECTED,
                     5: Constant.REPEATER_SELECTED,
-                    6: Constant.SHOVEL_SELECTED
                 }
                 bus.cardState = Constant.CARD_CLICKED
                 bus.cardSelection = dict[i]
+        ## 选择铲子
+        if CARD_BASIC_X + CARD_OFFSET * 6 < mousex < CARD_BASIC_X + CARD_WIDTH + CARD_OFFSET * 6 and \
+                    CARD_BASIC_Y < mousey < CARD_BASIC_Y + CARD_HEIGHT:
+            bus.cardState = Constant.CARD_CLICKED
+            bus.cardSelection = Constant.SHOVEL_SELECTED
     if rightButtonDown:
         bus.cardState = Constant.CARD_NOT_CLICKED
 

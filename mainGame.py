@@ -15,7 +15,6 @@ bus = Bus()
 sets = Setting()
 
 screen = pygame.display.set_mode((1400, 600), 0, 0)
-sets = Setting()
 bus.music = MusicPlayer()
 
 bus.music.play()
@@ -34,6 +33,9 @@ def initSun():
 def initScenario():
     screen.blit(sets.background, (0, 0))
     screen.blit(sets.seedBank, (0, 0))
+
+# 植物频率值
+plantIndex = 0
 
 '''
 paint部分
