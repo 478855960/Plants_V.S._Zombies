@@ -4,6 +4,7 @@ import pygame
 from util.loadimages import getImages
 from entity.plant.sunflower import Sunflower
 from entity.plant.peashooter import Peashooter
+from entity.plant.cherryBomb import CherryBomb
 from entity.sun import Sun
 
 from entity.plant.sunflower import Sunflower
@@ -90,7 +91,7 @@ def initPlantsMouseClickListener(bus, screen):
                 Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[1])),
                 Peashooter(screen, plantX, plantY, getImages(sets.plantsInitImages[2])),
                 Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[3])),
-                Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[4])),
+                CherryBomb(screen, plantX, plantY, getImages(sets.plantsInitImages[4]), bus),
                 Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[5])),
             ]
             if bus.cardState == Constant.CARD_CLICKED and bus.cardSelection in imagedict:
