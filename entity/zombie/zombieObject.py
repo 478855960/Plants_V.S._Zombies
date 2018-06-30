@@ -45,7 +45,7 @@ class ZombieObject(object):
         btXW = bt.x + bt.width
         btYH = bt.y + bt.height
         # 2.获取飞行物的坐标值
-        fX = self.x
+        fX = self.x + self.width/2
         fY = self.y
         fXW = self.x + self.width
         fYH = self.y + self.height

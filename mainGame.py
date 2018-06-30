@@ -149,31 +149,30 @@ def shootAction():
 # 碰撞测试
 def hitAction():
     for zombie in bus.zombies:
-        hit(zombie)
         eat(zombie)
+        hit(zombie)
 
 # 僵尸吃植物
 def eat(zb):
     for plant in bus.paintPlants:
         if plant.x + plant.width/2 == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
-            if zb.images == sets.zombieLostHeadImages:
+            if zb.life <= 3:
                 zb.images = sets.zombieLostHeadAttackImages
+            elif zb.life <= 5:
+                zb.images = sets.normalAttackImages
+            elif zb.life <= 7:
+                zb.images = sets.coneheadAttackImages
             else:
-                if isinstance(zb, Zombie_normal):
-                    zb.images = sets.normalAttackImages
-                elif isinstance(zb, Zombie_conehead):
-                    zb.images = sets.coneheadAttackImages
-                else:
-                    zb.images = sets.bucketAttackImages
+                zb.images = sets.bucketAttackImages
             plant.life -= 0.5
             if plant.life == 0:
                 bus.paintPlants.remove(plant)
                 if zb.images == sets.zombieLostHeadAttackImages:
                     zb.images = sets.zombieLostHeadImages
                 else:
-                    if isinstance(zb, Zombie_normal):
+                    if zb.images == sets.normalAttackImages:
                         zb.images = sets.zombie_normalImages
-                    elif isinstance(zb, Zombie_conehead):
+                    elif zb.images == sets.coneheadAttackImages:
                         zb.images = sets.zombie_coneheadImages
                     else:
                         zb.images = sets.zombie_bucketImages
@@ -201,10 +200,6 @@ def hit(zombie):
                     screen.blit(pygame.image.load(image), (zombie.x, zombie.y))
 
 
-
-# 判断僵尸遇到的碰撞类型 子弹或植物
-def meet(zb):
-    pass
 '''
 程序入口
 '''
