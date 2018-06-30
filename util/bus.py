@@ -43,3 +43,8 @@ class Bus:
     state = RUNNING
 
     music = None
+
+    # 子弹存储列表
+    bullets = []
+
+

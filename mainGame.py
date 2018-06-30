@@ -10,6 +10,7 @@ from util.bus import Bus
 import mouseListener
 import painter
 import actioner
+from entity.plant.peashooter import Peashooter
 
 bus = Bus()
 sets = Setting()
@@ -35,7 +36,8 @@ def initScenario():
 
 # 植物频率值
 plantIndex = 0
-
+# 子弹生成频率值
+shootIndex = 0
 '''
 paint部分
 '''
@@ -46,6 +48,7 @@ def paint():
     paintZombies()
     painter.cardMovePaint(bus, screen, sets)
     paintPlants()
+    paintBullets()
 
     # 绘制下落及在地上的太阳
     painter.paintSun(bus, screen, sets)
@@ -71,6 +74,10 @@ def paintZombies():
 def paintPlants():
     for plant in bus.paintPlants:
         plant.blitme()
+# 绘制子弹
+def paintBullets():
+    for bullet in bus.bullets:
+        bullet.blitme()
 
 '''
 action部分
@@ -92,8 +99,6 @@ def action():
     if bus.state == bus.RUNNING:
         stepAction()
         zombiesAction()
-
-        hitAction()
         # 阳光的动作
         actioner.sunAction(bus, screen, sets)
 
@@ -104,12 +109,17 @@ def action():
         for plant in bus.paintPlants:
             plant.step()
 
+        shootAction()
+
+        hitAction()
 
 # 走一步
 def stepAction():
     # 僵尸走一步
     for zombie in bus.zombies:
         zombie.step(sets)
+    for bullet in bus.bullets:
+        bullet.step()
 
 
 # 僵尸生成
@@ -124,36 +134,72 @@ def zombiesAction():
             # 1.存储到列表中
             bus.zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
 
+# 子弹生成
+def shootAction():
+    global shootIndex
+    shootIndex += 1
+
+    if shootIndex % 300 == 0:
+        for plant in bus.paintPlants:
+            if isinstance(plant, Peashooter):
+                bullet = plant.shootBy(screen, sets.peaBulletImg)
+                bus.bullets.append(bullet)
+
 
 # 碰撞测试
 def hitAction():
     for zombie in bus.zombies:
-        if not isinstance(zombie, Zombie_normal):
-            if zombie.life == 5:
-                zombie.images = sets.zombie_normalImages
-        if zombie.life == 3 and bus.headFlag is True:
-            zombie.images = sets.zombieLostHeadImages
-            screen.blit(sets.zombieHeadImages, (zombie.x, zombie.y))
-            bus.headFlag = False
-        elif zombie.life == 0:
-            bus.zombies(zombie)
-            screen.blit(sets.zombieDieImages, (zombie.x, zombie.y))
-
         hit(zombie)
+        eat(zombie)
 
-
-def hit(zb):
-    hitIndex = -1
-    for i in range(len(bus.paintPlants)):
-        plant = bus.paintPlants[i]
-        if plant.x + plant.width == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
-            if isinstance(zb,Zombie_normal):
-                zb.images = sets.normalAttackImages
-            elif isinstance(zb, Zombie_conehead):
-                zb.images = sets.coneheadAttackImages
+# 僵尸吃植物
+def eat(zb):
+    for plant in bus.paintPlants:
+        if plant.x + plant.width/2 == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
+            if zb.images == sets.zombieLostHeadImages:
+                zb.images = sets.zombieLostHeadAttackImages
             else:
-                zb.images = sets.bucketAttackImages
-            plant.life -= 1
+                if isinstance(zb, Zombie_normal):
+                    zb.images = sets.normalAttackImages
+                elif isinstance(zb, Zombie_conehead):
+                    zb.images = sets.coneheadAttackImages
+                else:
+                    zb.images = sets.bucketAttackImages
+            plant.life -= 0.5
+            if plant.life == 0:
+                bus.paintPlants.remove(plant)
+                if zb.images == sets.zombieLostHeadAttackImages:
+                    zb.images = sets.zombieLostHeadImages
+                else:
+                    if isinstance(zb, Zombie_normal):
+                        zb.images = sets.zombie_normalImages
+                    elif isinstance(zb, Zombie_conehead):
+                        zb.images = sets.zombie_coneheadImages
+                    else:
+                        zb.images = sets.zombie_bucketImages
+
+
+
+# 僵尸被攻击
+def hit(zombie):
+    for bullet in bus.bullets:
+        if zombie.hitBy(bullet):
+            zombie.life -= 1
+            bus.bullets.remove(bullet)
+            if zombie.life == 5:
+                if not isinstance(zombie, Zombie_normal):
+                    zombie.images = sets.zombie_normalImages
+            elif zombie.life == 3:
+                if zombie.headFlag is True:
+                    zombie.images = sets.zombieLostHeadImages
+                    for image in sets.zombieHeadImages:
+                        screen.blit(pygame.image.load(image), (zombie.x, zombie.y))
+                    zombie.headFlag = False
+            elif zombie.life == 0:
+                bus.zombies.remove(zombie)
+                for image in sets.zombieDieImages:
+                    screen.blit(pygame.image.load(image), (zombie.x, zombie.y))
+
 
 
 # 判断僵尸遇到的碰撞类型 子弹或植物

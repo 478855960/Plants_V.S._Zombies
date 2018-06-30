@@ -36,3 +36,18 @@ class ZombieObject(object):
     # 绘图方法
     def blitme(self):
         self.screen.blit(self.image, (self.x, self.y))
+
+    # 子弹与僵尸碰撞
+    def hitBy(self, bt):
+        # 1.获取子弹的坐标值
+        btX = bt.x
+        btY = bt.y
+        btXW = bt.x + bt.width
+        btYH = bt.y + bt.height
+        # 2.获取飞行物的坐标值
+        fX = self.x
+        fY = self.y
+        fXW = self.x + self.width
+        fYH = self.y + self.height
+        # 3.返回判断值
+        return fX < btX and fXW > btXW and fY < btY and fYH > btYH

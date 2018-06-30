@@ -277,7 +277,7 @@ class Setting(object):
         ]
 
         # 子弹贴图
-        bulletImg = 'image/bullet_01.png'
+        self.peaBulletImg = 'image/peaBullet.png'
 
         # 关于草地格子的坐标
         # 格子X坐标
