@@ -12,6 +12,7 @@ from entity.plant.cherryBomb import CherryBomb
 from entity.plant.repeater import Repeater
 from entity.plant.cactus import Cactus
 import sys
+from util.bus import Bus
 
 import random
 sets = Setting()
@@ -157,5 +158,11 @@ def runOrPause(bus, screen, sets):
         bus.state = bus.RUNNING
     elif 1257 < mouseX < 1350 and 495 < mouseY < 539:
         sys.exit(0)
-    else:
+    elif leftFlag and bus.state == bus.PAUSE:
         bus.state = bus.RUNNING
+    elif bus.state == bus.DEAD or bus.state == bus.END:
+        if 933 < mouseX < 1300 and  100 < mouseY < 150 :
+            bus = Bus()
+            bus.state = bus.RUNNING
+        elif 933 < mouseX < 1300 and  180 < mouseY < 230 :
+            sys.exit(0)

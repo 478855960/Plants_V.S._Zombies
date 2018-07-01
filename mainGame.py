@@ -58,7 +58,8 @@ def paint():
         painter.paintPause(bus, screen, sets)
     elif bus.state == bus.DEAD:
         painter.deadPaint(bus, screen, sets)
-        time.sleep(2)
+    elif bus.state == bus.END:
+        painter.wonPaint(bus, screen, sets)
         
 
 

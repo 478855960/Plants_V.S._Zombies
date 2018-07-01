@@ -313,3 +313,5 @@ class Setting(object):
 
         #结束界面图片加载
         self.zombiewin = pygame.image.load('image/ZombiesWon.png')
+        self.selection = pygame.image.load('image/selection.png')
+        self.banner = pygame.image.load('image/banner.png')
