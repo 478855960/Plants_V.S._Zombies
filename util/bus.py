@@ -20,6 +20,7 @@ class Bus:
     zombieIndex = 0
     # 掉头信号
     headFlag = True
+    zombieRate = 0
 
     # 存放正在下落太阳的列表
     sunFall = []

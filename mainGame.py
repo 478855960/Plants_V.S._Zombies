@@ -125,8 +125,14 @@ def stepAction():
 # 僵尸生成
 def zombiesAction():
     bus.zombieIndex += 1
+    if 8000 <= bus.globalTime <= 9000 or 15500 <= bus.globalTime <= 15700:
+        bus.zombieRate = 125
+    else:
+        bus.zombieRate = 500
 
-    if bus.zombieIndex % 1000 == 0:
+    if bus.globalTime == 15500:
+        bus.zombies.append(Zombie_bucket(screen, sets.bucketAttackImages))
+    if bus.zombieIndex % bus.zombieRate == 0:
         type = random.randint(0, 20)
         if type < 8:
             bus.zombies.append(Zombie_conehead(screen, sets.zombie_coneheadImages))
@@ -151,7 +157,10 @@ def eat(zb):
                 elif zb.life <= 5:
                     zb.images = sets.normalAttackImages
                 elif zb.life <= 7:
-                    zb.images = sets.coneheadAttackImages
+                    if not isinstance(zb, Zombie_bucket):
+                        zb.images = sets.coneheadAttackImages
+                    else:
+                        zb.images = sets.bucketAttackImages
                 else:
                     zb.images = sets.bucketAttackImages
                 plant.life -= 0.5
