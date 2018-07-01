@@ -114,6 +114,7 @@ def initPlantsMouseClickListener(bus, screen):
                 if bus.paintPlants[i].gridX == gridX \
                         and bus.paintPlants[i].gridY == gridY:
                     del bus.paintPlants[i]
+                    break
             bus.gridList[gridX][gridY] = -1
 
 def sunMouseClickListener(bus, screen, sets):
