@@ -121,11 +121,11 @@ def stepAction():
 def zombiesAction():
     bus.zombieIndex += 1
     if 7000 <= bus.globalTime <= 8000 or 14200 <= bus.globalTime <= 14400:
-        bus.zombieRate = 125
+        bus.zombieRate = 50
     else:
         bus.zombieRate = 500
 
-    if bus.globalTime == 14200:
+    if bus.globalTime == 14300:
         bus.zombies.append(Zombie_bucket(screen, sets.zombie_bucketImages))
         bus.endFlag = 1
     if bus.globalTime < 14400:

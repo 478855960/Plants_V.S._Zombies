@@ -11,7 +11,7 @@ class Zombie_conehead(ZombieObject):
         self.image = pygame.image.load(images[0])
         self.x = 1000
         self.y = 10 + random.randint(0, 4) * 100
-        self.life = 7
+        self.life = 8
         self.damage = 1
 
         super(Zombie_conehead, self).__init__(screen, self.x, self.y, self.image, self.life, self.damage)

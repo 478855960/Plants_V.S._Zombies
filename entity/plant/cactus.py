@@ -13,7 +13,7 @@ class Cactus(Plant):
         self.image = images[0]
         self.width = 0
         self.height = 0
-        super(Cactus,self).__init__(screen, self.x, self.y, self.image)
+        super(Cactus, self).__init__(screen, self.x, self.y, self.image)
 
         # step要用到的index
         self.index = 0
@@ -21,7 +21,7 @@ class Cactus(Plant):
         self.life = 200
         self.sunshine = 125
         self.attack = 10
-        self.interval = 200
+        self.interval = 500
         self.cd = 10
 
     def step(self, bus, screen, sets):

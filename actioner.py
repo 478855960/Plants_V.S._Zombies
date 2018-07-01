@@ -25,7 +25,7 @@ def sunAction(bus, screen, sets):
 
 def endAction(bus, screen, sets):
     if bus.endFlag == 1 and len(bus.zombies) == 0:
-        bus.state == bus.END
+        bus.state = bus.END
         return
 
     for zombie in bus.zombies:
