@@ -96,6 +96,8 @@ def initPlantsMouseClickListener(bus, screen):
             ]
             if bus.cardState == Constant.CARD_CLICKED and bus.cardSelection in imagedict:
                 index = imagedict[bus.cardSelection]
+                plantdict[index].gridX = gridX
+                plantdict[index].gridY = gridY
                 bus.paintPlants.append(plantdict[index])
                 bus.cardState = Constant.CARD_NOT_CLICKED
                 bus.sunScore -= plantdict[index].sunshine

@@ -41,6 +41,3 @@ class Peashooter(Plant):
     def shootBy(self, screen, image):
         bs = Bullet(screen, image, self.x + 50, self.y)
         return bs
-
-
-

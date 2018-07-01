@@ -43,7 +43,10 @@ class CherryBomb(Plant):
             if isinstance(self.bus.paintPlants[i], CherryBomb):
                 # 此处是遍历僵尸列表，消灭在爆炸范围之内的全部僵尸
 
+
+                self.bus.gridList[self.gridX][self.gridY] = -1
                 del self.bus.paintPlants[i]
+                break
 
 
     # 樱桃炸弹爆炸一次之后就死亡
