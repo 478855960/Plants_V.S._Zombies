@@ -77,14 +77,21 @@ class Setting(object):
         ]
         # 铁桶僵尸
         self.zombie_bucketImages = [
-            "image/zombie_bucket/z_02_01.png",
-            "image/zombie_bucket/z_02_02.png",
-            "image/zombie_bucket/z_02_03.png",
-            "image/zombie_bucket/z_02_04.png",
-            "image/zombie_bucket/z_02_05.png",
-            "image/zombie_bucket/z_02_06.png",
-            "image/zombie_bucket/z_02_07.png",
-            "image/zombie_bucket/z_02_08.png"
+            "image/zombie_bucket/0.png",
+            "image/zombie_bucket/1.png",
+            "image/zombie_bucket/2.png",
+            "image/zombie_bucket/3.png",
+            "image/zombie_bucket/4.png",
+            "image/zombie_bucket/5.png",
+            "image/zombie_bucket/6.png",
+            "image/zombie_bucket/7.png",
+            "image/zombie_bucket/8.png",
+            "image/zombie_bucket/9.png",
+            "image/zombie_bucket/10.png",
+            "image/zombie_bucket/11.png",
+            "image/zombie_bucket/12.png",
+            "image/zombie_bucket/13.png",
+            "image/zombie_bucket/14.png"
         ]
 
         # 掉头僵尸

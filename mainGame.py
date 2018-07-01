@@ -127,8 +127,8 @@ def zombiesAction():
     else:
         bus.zombieRate = 500
 
-    if bus.globalTime == 15500:
-        bus.zombies.append(Zombie_bucket(screen, sets.bucketAttackImages))
+    if bus.globalTime == 14200:
+        bus.zombies.append(Zombie_bucket(screen, sets.zombie_bucketImages))
     if bus.zombieIndex % bus.zombieRate == 0:
         type = random.randint(0, 20)
         if type < 8:
