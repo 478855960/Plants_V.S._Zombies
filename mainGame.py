@@ -11,6 +11,7 @@ import mouseListener
 import painter
 import actioner
 from entity.plant.peashooter import Peashooter
+from entity.plant.cherryBomb import CherryBomb
 
 bus = Bus()
 sets = Setting()
@@ -143,27 +144,29 @@ def hitAction():
 # 僵尸吃植物
 def eat(zb):
     for plant in bus.paintPlants:
-        if plant.x + plant.width/2 == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
-            if zb.life <= 3:
-                zb.images = sets.zombieLostHeadAttackImages
-            elif zb.life <= 5:
-                zb.images = sets.normalAttackImages
-            elif zb.life <= 7:
-                zb.images = sets.coneheadAttackImages
-            else:
-                zb.images = sets.bucketAttackImages
-            plant.life -= 0.5
-            if plant.life == 0:
-                bus.paintPlants.remove(plant)
-                if zb.images == sets.zombieLostHeadAttackImages:
-                    zb.images = sets.zombieLostHeadImages
+        if not isinstance(plant, CherryBomb):
+            if plant.x + plant.width/2 == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
+                if zb.life <= 3:
+                    zb.images = sets.zombieLostHeadAttackImages
+                elif zb.life <= 5:
+                    zb.images = sets.normalAttackImages
+                elif zb.life <= 7:
+                    zb.images = sets.coneheadAttackImages
                 else:
-                    if zb.images == sets.normalAttackImages:
-                        zb.images = sets.zombie_normalImages
-                    elif zb.images == sets.coneheadAttackImages:
-                        zb.images = sets.zombie_coneheadImages
+                    zb.images = sets.bucketAttackImages
+                plant.life -= 0.5
+                if plant.life == 0:
+                    bus.gridList[plant.gridX][plant.gridY] = -1
+                    bus.paintPlants.remove(plant)
+                    if zb.images == sets.zombieLostHeadAttackImages:
+                        zb.images = sets.zombieLostHeadImages
                     else:
-                        zb.images = sets.zombie_bucketImages
+                        if zb.images == sets.normalAttackImages:
+                            zb.images = sets.zombie_normalImages
+                        elif zb.images == sets.coneheadAttackImages:
+                            zb.images = sets.zombie_coneheadImages
+                        else:
+                            zb.images = sets.zombie_bucketImages
 
 
 

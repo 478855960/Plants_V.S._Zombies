@@ -18,9 +18,6 @@ class Zombie_conehead(ZombieObject):
         self.index = 0
         self.headFlag = True
 
-    def outOfBounds(self):
-        pass
-
     def step(self, sets):
         if self.images == sets.zombie_coneheadImages or self.images == sets.zombieLostHeadImages or self.images == sets.zombie_normalImages:
             self.x -= 0.5

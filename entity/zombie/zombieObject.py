@@ -25,9 +25,8 @@ class ZombieObject(object):
         self.life = life
         self.damage = damage
 
-    @abc.abstractmethod
     def outOfBounds(self):
-        pass
+        return self.x < 100
 
     @abc.abstractmethod
     def step(self, sets):

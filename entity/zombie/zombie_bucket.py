@@ -19,9 +19,6 @@ class Zombie_bucket(ZombieObject):
         # 图片集转换集
         self.index = 0
 
-    def outOfBounds(self):
-        return self.x < 0
-
     def step(self):
         # 1.更改坐标值
         self.x -= 0.5
