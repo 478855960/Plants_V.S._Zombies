@@ -212,10 +212,10 @@ class Setting(object):
             plantsImgDir + 'WallNut/',
             plantsImgDir + 'SunFlower/',
             plantsImgDir + 'Peashooter/',
-            plantsImgDir + 'Chomper/',
+            plantsImgDir + 'Cactus/',
             plantsImgDir + 'CherryBomb/',
             plantsImgDir + 'Repeater/',
-            plantsImgDir + 'CherryBombBoom/'
+            plantsImgDir + 'CherryBombBoom/',
         ]
         self.peashooterImg = plantsImgDir + 'Peashooter/'
         self.cherryBombImg = plantsImgDir + 'CherryBomb/'
