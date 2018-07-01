@@ -29,7 +29,9 @@ def cardMouseClickListener(bus):
         # i --> 0-坚果 1-向日葵 2-豌豆射手 3-食人花 4-樱桃炸弹 5-豌豆射手double
         # 设置count循环次数 控制暗色植物不能点击
         rangeCount = 0
-        if 50 <= bus.sunScore < 100:
+        if bus.sunScore < 50:
+            rangeCount = 0
+        elif 50 <= bus.sunScore < 100:
             rangeCount = 2
         elif 100 <= bus.sunScore < 150:
             rangeCount = 3
