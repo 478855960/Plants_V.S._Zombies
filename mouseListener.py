@@ -75,6 +75,7 @@ def getGridX(mouseX):
 def initPlantsMouseClickListener(bus, screen):
     leftButtonDown = pygame.mouse.get_pressed()[0]
     if leftButtonDown:
+        bus.music.urgent()
         mouseX, mouseY = pygame.mouse.get_pos()
         gridX = getGridX(mouseX)
         gridY = int((mouseY - sets.topY) / sets.gridHeight)

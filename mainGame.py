@@ -20,7 +20,6 @@ bus.music = MusicPlayer()
 
 bus.music.play()
 
-
 def initSun():
     for i in range(4):
         xx = random.randint(260, 880)
@@ -131,17 +130,6 @@ def zombiesAction():
         else:
             # 1.存储到列表中
             bus.zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
-
-# 子弹生成
-# def shootAction():
-#     global shootIndex
-#     shootIndex += 1
-#
-#     if shootIndex % 300 == 0:
-#         for plant in bus.paintPlants:
-#             if isinstance(plant, Peashooter):
-#                 bullet = plant.shootBy(screen, sets.peaBulletImg)
-#                 bus.bullets.append(bullet)
 
 
 # 碰撞测试

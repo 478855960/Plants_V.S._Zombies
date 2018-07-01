@@ -47,4 +47,8 @@ class Bus:
     # 子弹存储列表
     bullets = []
 
+    #是否进入中段和末段
+    midPercentage = False
+    finalPercentage = False
+
 

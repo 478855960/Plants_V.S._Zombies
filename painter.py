@@ -28,7 +28,7 @@ def initScenario(bus, screen, sets):
         0: sets.cardNutWall,
         1: sets.sunflower,
         2: sets.cardPeashooter,
-        3: sets.chomper,
+        3: sets.cactus,
         4: sets.cherry,
         5: sets.cardPeashooterdouble
     }
@@ -36,7 +36,7 @@ def initScenario(bus, screen, sets):
         0: sets.cardNutWallDark,
         1: sets.sunflowerDark,
         2: sets.cardPeashooterDark,
-        3: sets.chomperDark,
+        3: sets.cactusDark,
         4: sets.cherryDark,
         5: sets.cardPeashooterdoubleDark
     }
@@ -45,7 +45,9 @@ def initScenario(bus, screen, sets):
             screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
         elif  1 < i <= 2 and bus.sunScore >= 100:
             screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
-        elif 2 < i <= 4 and bus.sunScore >= 150:
+        elif 2 < i <= 3 and bus.sunScore >= 125:
+            screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
+        elif 3 < i <= 4 and bus.sunScore >= 150:
             screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
         elif 4 < i <= 5 and bus.sunScore >= 200:
             screen.blit(dict[i], (80 + CARD_OFFSET * i, 10))
@@ -94,10 +96,16 @@ def painProgressBar(bus, screen, sets):
 
     if percentage >= 3 and percentage <= 4:
         screen.blit(sets.prepareGrowPlants.subsurface(Rect((0, 212), (255, 112))), (550, 240))
+    if not bus.midPercentage and 40 < percentage < 99 :
+        bus.music.water()
+        bus.midPercentage = True
 
     # 绘制最后一波提示语
     if percentage >= 99 and percentage <= 100:
         screen.blit(sets.finalWave, (550, 240))
+        if not bus.finalPercentage:
+            bus.music.urgent()
+            bus.finalPercentage = True
 
 
     screen.blit(sets.flagMeterFull, (1200, 560))
