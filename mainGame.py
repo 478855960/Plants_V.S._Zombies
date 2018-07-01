@@ -174,8 +174,13 @@ def eat(zb):
 def hit(zombie):
     for bullet in bus.bullets:
         if zombie.hitBy(bullet):
+            print('HIT!!!!')
             zombie.life -= 1
-            bus.bullets.remove(bullet)
+            # 豌豆不穿透，仙人掌刺穿透
+            if bullet.type == 0:
+                # for i in range(100):
+                #     screen.blit(sets.bulletHitImg, (zombie.x-100, zombie.y))
+                bus.bullets.remove(bullet)
             if zombie.life == 5:
                 if not isinstance(zombie, Zombie_normal):
                     zombie.images = sets.zombie_normalImages

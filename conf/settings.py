@@ -280,6 +280,8 @@ class Setting(object):
         # 豌豆、仙人掌子弹贴图
         self.peaBulletImg = 'image/peaBullet.png'
         self.cactusBulletImg = 'image/bullet_02.png'
+        # 豌豆子弹碎裂
+        self.bulletHitImg = pygame.image.load('image/PeaBulletHit.png')
         # 关于草地格子的坐标
         # 格子X坐标
         self.gridXIndexes = [260, 340, 418, 500, 583, 662, 740, 820, 910, 996]

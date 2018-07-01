@@ -49,4 +49,4 @@ class ZombieObject(object):
         fXW = self.x + self.width
         fYH = self.y + self.height
         # 3.返回判断值
-        return fX < btX and fXW > btXW and fY < btY and fYH > btYH
+        return fX >= btX-2 and fX <= btX+1.5 and fY < btY and fYH > btYH

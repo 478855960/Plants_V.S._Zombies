@@ -20,8 +20,8 @@ class Cactus(Plant):
 
         self.life = 200
         self.sunshine = 125
-        self.attack = 30
-        self.interval = 120
+        self.attack = 10
+        self.interval = 200
         self.cd = 10
 
     def step(self, bus, screen, sets):
@@ -36,5 +36,5 @@ class Cactus(Plant):
 
         # 子弹生成
     def shootBy(self, screen, image):
-        bs = Bullet(screen, image, self.x + 50, self.y+30)
+        bs = Bullet(screen, image, self.x + 65, self.y + 23, 1)
         return bs

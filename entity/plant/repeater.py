@@ -40,7 +40,7 @@ class Repeater(Plant):
 
 
     def shootBy(self, screen, image):
-        bs = Bullet(screen, image, self.x + 50, self.y)
+        bs = Bullet(screen, image, self.x + 65, self.y + 2, 0)
         return bs
 
     def shoot(self, bus, screen, sets):

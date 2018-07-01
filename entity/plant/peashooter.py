@@ -37,5 +37,5 @@ class Peashooter(Plant):
 
     # 子弹生成
     def shootBy(self, screen, image):
-        bs = Bullet(screen, image, self.x + 50, self.y)
+        bs = Bullet(screen, image, self.x + 55, self.y, 0)
         return bs
