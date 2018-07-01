@@ -109,7 +109,7 @@ def initPlantsMouseClickListener(bus, screen):
                 bus.sunScore -= plantdict[index].sunshine
                 bus.gridList[gridX][gridY] = index
         # 如果选中的是铲子
-        elif bus.cardSelection == Constant.SHOVEL_SELECTED \
+        elif bus.cardState == Constant.CARD_CLICKED and bus.cardSelection == Constant.SHOVEL_SELECTED \
                 and bus.gridList[gridX][gridY] != -1:
             for i in range(len(bus.paintPlants)):
                 if bus.paintPlants[i].gridX == gridX \
@@ -117,6 +117,7 @@ def initPlantsMouseClickListener(bus, screen):
                     del bus.paintPlants[i]
                     break
             bus.gridList[gridX][gridY] = -1
+            bus.cardState = Constant.CARD_NOT_CLICKED
 
 def sunMouseClickListener(bus, screen, sets):
         # 获取列表  中左键   返回 True  False
