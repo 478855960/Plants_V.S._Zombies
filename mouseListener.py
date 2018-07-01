@@ -26,7 +26,7 @@ def cardMouseClickListener(bus):
         CARD_HEIGHT = 68
         CARD_WIDTH = 55
         CARD_OFFSET = 60
-        # i --> 0-坚果 1-向日葵 2-豌豆射手 3-食人花 4-樱桃炸弹 5-豌豆射手double
+        # i --> 0-坚果 1-向日葵 2-豌豆射手 3-仙人掌 4-樱桃炸弹 5-豌豆射手double
         # 设置count循环次数 控制暗色植物不能点击
         rangeCount = 0
         if bus.sunScore < 50:
@@ -107,6 +107,14 @@ def initPlantsMouseClickListener(bus, screen):
                 bus.cardState = Constant.CARD_NOT_CLICKED
                 bus.sunScore -= plantdict[index].sunshine
                 bus.gridList[gridX][gridY] = index
+        # 如果选中的是铲子
+        elif bus.cardSelection == Constant.SHOVEL_SELECTED \
+                and bus.gridList[gridX][gridY] != -1:
+            for i in range(len(bus.paintPlants)):
+                if bus.paintPlants[i].gridX == gridX \
+                        and bus.paintPlants[i].gridY == gridY:
+                    del bus.paintPlants[i]
+            bus.gridList[gridX][gridY] = -1
 
 def sunMouseClickListener(bus, screen, sets):
         # 获取列表  中左键   返回 True  False

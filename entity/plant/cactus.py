@@ -21,7 +21,7 @@ class Cactus(Plant):
         self.life = 200
         self.sunshine = 125
         self.attack = 30
-        self.interval = 50
+        self.interval = 120
         self.cd = 10
 
     def step(self, bus, screen, sets):
