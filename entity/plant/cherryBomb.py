@@ -51,7 +51,7 @@ class CherryBomb(Plant):
 
 
     # 樱桃炸弹爆炸一次之后就死亡
-    def step(self):
+    def step(self, bus, screen, sets):
         self.index += 1
 
         # 樱桃炸弹逐渐变大 , 在更改images后变为爆炸效果

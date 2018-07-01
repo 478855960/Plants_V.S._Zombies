@@ -109,6 +109,8 @@ def action():
         for plant in bus.paintPlants:
             plant.step(bus, screen, sets)
 
+        # shootAction()
+
         hitAction()
 
 # 走一步
