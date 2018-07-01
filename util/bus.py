@@ -55,4 +55,11 @@ class Bus:
     midPercentage = False
     finalPercentage = False
 
+    # 植物频率值
+    plantIndex = 0
+    # 子弹生成频率值
+    shootIndex = 0
+
+    # 游戏结束信号
+    endFlag = 0
 

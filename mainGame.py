@@ -30,10 +30,7 @@ def initSun():
         goal = random.randint(300, 600)
         sun = Sun(screen, sets.sunImage, xx, yy,goal)
         bus.sunFall.append(sun)
-# 植物频率值
-plantIndex = 0
-# 子弹生成频率值
-shootIndex = 0
+
 '''
 paint部分
 '''
@@ -129,13 +126,15 @@ def zombiesAction():
 
     if bus.globalTime == 14200:
         bus.zombies.append(Zombie_bucket(screen, sets.zombie_bucketImages))
-    if bus.zombieIndex % bus.zombieRate == 0:
-        type = random.randint(0, 20)
-        if type < 8:
-            bus.zombies.append(Zombie_conehead(screen, sets.zombie_coneheadImages))
-        else:
-            # 1.存储到列表中
-            bus.zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
+        bus.endFlag = 1
+    if bus.globalTime < 14400:
+        if bus.zombieIndex % bus.zombieRate == 0:
+            type = random.randint(0, 20)
+            if type < 8:
+                bus.zombies.append(Zombie_conehead(screen, sets.zombie_coneheadImages))
+            else:
+                # 1.存储到列表中
+                bus.zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
 
 
 # 碰撞测试
