@@ -62,10 +62,6 @@ def paint():
         painter.wonPaint(bus, screen, sets)
         
 
-
-
-
-
 # 绘制僵尸
 def paintZombies():
     for zombie in bus.zombies:
@@ -200,6 +196,10 @@ def hit(zombie):
                 bus.zombies.remove(zombie)
                 for image in sets.zombieDieImages:
                     screen.blit(pygame.image.load(image), (zombie.x, zombie.y))
+
+        # 子弹越界删除
+        if bullet.outOfBounds():
+            bus.bullets.remove(bullet)
 
 
 '''
