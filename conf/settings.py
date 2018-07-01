@@ -271,15 +271,15 @@ class Setting(object):
             pygame.image.load('image/mouseMoveCard/mouseNut.gif'),
             pygame.image.load('image/mouseMoveCard/mouseSunflower.gif'),
             pygame.image.load('image/mouseMoveCard/mousepeashooter.gif'),
-            pygame.image.load('image/mouseMoveCard/mouseChomper.gif'),
+            pygame.image.load('image/mouseMoveCard/mouseCactus.png'),
             pygame.image.load('image/mouseMoveCard/mouseCherry.gif'),
             pygame.image.load('image/mouseMoveCard/repeater.gif'),
             self.cardShovel
         ]
 
-        # 子弹贴图
+        # 豌豆、仙人掌子弹贴图
         self.peaBulletImg = 'image/peaBullet.png'
-
+        self.cactusBulletImg = 'image/bullet_02.png'
         # 关于草地格子的坐标
         # 格子X坐标
         self.gridXIndexes = [260, 340, 418, 500, 583, 662, 740, 820, 910, 996]

@@ -28,7 +28,7 @@ class Cactus(Plant):
         self.index += 1
         # 执行功能
         if self.index == self.interval:
-            bus.bullets.append(self.shootBy(screen, sets.peaBulletImg))
+            bus.bullets.append(self.shootBy(screen, sets.cactusBulletImg))
             self.index = 0
         # 更改图片
         ix = self.index / 7 % len(self.images)
