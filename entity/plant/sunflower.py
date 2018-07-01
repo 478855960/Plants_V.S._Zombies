@@ -5,6 +5,8 @@ description: sunflower
 import pygame
 from conf.settings import Setting
 from entity.plant.plant import Plant
+from entity.sun import Sun
+from util.bus import Bus
 
 # 图片路径的全局变量
 sets = Setting()
@@ -31,14 +33,16 @@ class Sunflower(Plant):
         self.cd = 5
 
     # 向日葵的功能：在自己的右上方生成阳光
-    def function(self, image):
-        self.screen.blit(image, (self.x + self.width/2, self.y + self.height/2))
+    def function(self):
+        sun = Sun(self.screen, sets.sunImage, self.x + self.width/2, self.y + self.height/2, 0)
+
+        Bus.sunStay.append(sun)
 
     def step(self):
         self.index += 1
         # 执行功能
-        # if self.index == self.interval:
-        #     function()
+        if self.index % 600 == 0:
+             self.function()
         #     self.index = 0
         # 更改图片
         ix = self.index / 10 % len(self.images)

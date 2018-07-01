@@ -1,6 +1,7 @@
 import pygame
 from entity.plant.plant import Plant
 from conf.settings import Setting
+from entity.bullet import Bullet
 
 set = Setting()
 
@@ -36,7 +37,7 @@ class Peashooter(Plant):
         ix = self.index / 7 % len(self.images)
         self.image = self.images[int(ix)]
 
-
-
-
-
+    # 子弹生成
+    def shootBy(self, screen, image):
+        bs = Bullet(screen, image, self.x + 50, self.y)
+        return bs

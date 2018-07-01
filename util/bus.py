@@ -34,6 +34,17 @@ class Bus:
     # 全局统一的时间轴
     globalTime = 0
 
+    # 格子的二维数组
+    gridList = [([-1] * 5) for i in range(9)]
 
+    # 游戏状态
+    RUNNING = 1
+    PAUSE = 2
+    state = RUNNING
 
     music = None
+
+    # 子弹存储列表
+    bullets = []
+
+

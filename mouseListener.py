@@ -4,6 +4,7 @@ import pygame
 from util.loadimages import getImages
 from entity.plant.sunflower import Sunflower
 from entity.plant.peashooter import Peashooter
+from entity.plant.cherryBomb import CherryBomb
 from entity.sun import Sun
 
 from entity.plant.wallnut import Wallnut
@@ -75,12 +76,13 @@ def initPlantsMouseClickListener(bus, screen):
     leftButtonDown = pygame.mouse.get_pressed()[0]
     if leftButtonDown:
         mouseX, mouseY = pygame.mouse.get_pos()
+        gridX = getGridX(mouseX)
+        gridY = int((mouseY - sets.topY) / sets.gridHeight)
+        plantX = sets.gridXIndexes[gridX]
+        plantY = sets.topY + sets.gridHeight * gridY
         if mouseX >= sets.leftX and mouseX <= sets.rightX \
-            and mouseY <= sets.bottomY and mouseY >= sets.topY:
-            gridX = getGridX(mouseX)
-            gridY = int((mouseY - sets.topY) / sets.gridHeight)
-            plantX = sets.gridXIndexes[gridX]
-            plantY = sets.topY + sets.gridHeight * gridY
+            and mouseY <= sets.bottomY and mouseY >= sets.topY \
+                    and bus.gridList[gridX][gridY] == -1:
             imagedict = {
                 Constant.NUT_SELECTED: 0,
                 Constant.SUNFLOWER_SELECTED: 1,
@@ -94,14 +96,17 @@ def initPlantsMouseClickListener(bus, screen):
                 Sunflower(screen, plantX, plantY, getImages(sets.plantsInitImages[1])),
                 Peashooter(screen, plantX, plantY, getImages(sets.plantsInitImages[2])),
                 Chomper(screen, plantX, plantY, getImages(sets.plantsInitImages[3])),
-                CherryBomb(screen, plantX, plantY, getImages(sets.plantsInitImages[4])),
+                CherryBomb(screen, plantX, plantY, getImages(sets.plantsInitImages[4]), bus),
                 Repeater(screen, plantX, plantY, getImages(sets.plantsInitImages[5])),
             ]
             if bus.cardState == Constant.CARD_CLICKED and bus.cardSelection in imagedict:
                 index = imagedict[bus.cardSelection]
+                plantdict[index].gridX = gridX
+                plantdict[index].gridY = gridY
                 bus.paintPlants.append(plantdict[index])
                 bus.cardState = Constant.CARD_NOT_CLICKED
                 bus.sunScore -= plantdict[index].sunshine
+                bus.gridList[gridX][gridY] = index
 
 def sunMouseClickListener(bus, screen, sets):
         # 获取列表  中左键   返回 True  False
@@ -129,3 +134,13 @@ def sunMouseClickListener(bus, screen, sets):
                 goal = random.randint(300, 600)
                 bus.sunStay[i] = Sun(screen, sets.sunImage, xx, yy, goal)
                 break
+
+def runOrPause(bus, screen, sets):
+    leftFlag = pygame.mouse.get_pressed()[0]
+
+    mouseX, mouseY = pygame.mouse.get_pos()
+
+    if mouseX >= 1265 and mouseX <= 1265 + 113 and mouseY >= 10 and mouseY <= 10 + 41 and bus.state == bus.RUNNING:
+        bus.state = bus.PAUSE
+    else:
+        bus.state = bus.RUNNING

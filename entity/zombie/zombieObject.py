@@ -30,19 +30,24 @@ class ZombieObject(object):
         pass
 
     @abc.abstractmethod
-    def step(self):
+    def step(self, sets):
         pass
 
     # 绘图方法
     def blitme(self):
         self.screen.blit(self.image, (self.x, self.y))
 
-    # 僵尸与植物碰撞
-    def hitBy(self, zb):
-        # 获取僵尸的坐标值
-        zbX = zb.x
-        # 获取植物的坐标值
-        plXW = self.x + self.width
-
-        # 返回判断值
-        return zbX == 500
+    # 子弹与僵尸碰撞
+    def hitBy(self, bt):
+        # 1.获取子弹的坐标值
+        btX = bt.x
+        btY = bt.y
+        btXW = bt.x + bt.width
+        btYH = bt.y + bt.height
+        # 2.获取飞行物的坐标值
+        fX = self.x + self.width/2
+        fY = self.y
+        fXW = self.x + self.width
+        fYH = self.y + self.height
+        # 3.返回判断值
+        return fX < btX and fXW > btXW and fY < btY and fYH > btYH

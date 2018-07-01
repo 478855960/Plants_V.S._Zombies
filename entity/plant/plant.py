@@ -11,6 +11,9 @@ class Plant(object):
         self.image = image
         self.width = 0
         self.height = 0
+        # 格子坐标
+        self.gridX = -1
+        self.gridY = -1
 
         # 生命值、阳光消耗、攻击力、射击间隔、冷却时间
         self.life = 0

@@ -15,12 +15,13 @@ class Zombie_normal(ZombieObject):
         super(Zombie_normal, self).__init__(screen, self.x, self.y, self.image, self.life, self.damage)
 
         self.index = 0
+        self.headFlag = True
 
     def outOfBounds(self):
         pass
 
-    def step(self):
-        if self.x > 500:
+    def step(self, sets):
+        if self.images == sets.zombie_normalImages or self.images == sets.zombieLostHeadImages:
             self.x -= 0.5
         self.index += 1
         ix = self.index / (len(self.images)/2) % len(self.images)
