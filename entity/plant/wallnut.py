@@ -1,6 +1,6 @@
 from entity.plant.plant import Plant
 from conf.settings import Setting
-
+from util.loadimages import getImages
 set = Setting()
 
 class Wallnut(Plant):
@@ -17,7 +17,7 @@ class Wallnut(Plant):
         # step要用到的index
         self.index = 0
 
-        self.life = 2000
+        self.life = 200
         self.sunshine = 50
         self.attack = 0
         self.interval = 50
@@ -33,5 +33,9 @@ class Wallnut(Plant):
             self.function()
             self.index = 0
         # 更改图片
+        if self.life == 150:
+            self.images = getImages('image/plants/WallNutCracked/')
+        if self.life == 50:
+            self.images = getImages('image/plants/WallNutBadlyCracked/')
         ix = self.index / 7 % len(self.images)
         self.image = self.images[int(ix)]
