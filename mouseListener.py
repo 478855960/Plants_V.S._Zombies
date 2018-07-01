@@ -11,6 +11,7 @@ from entity.plant.chomper import Chomper
 from entity.plant.cherryBomb import CherryBomb
 from entity.plant.repeater import Repeater
 from entity.plant.cactus import Cactus
+import sys
 
 import random
 sets = Setting()
@@ -151,5 +152,9 @@ def runOrPause(bus, screen, sets):
 
     if mouseX >= 1265 and mouseX <= 1265 + 113 and mouseY >= 10 and mouseY <= 10 + 41 and bus.state == bus.RUNNING:
         bus.state = bus.PAUSE
+    elif 740 < mouseX  < 740 + 500 and 100 < mouseY < 200 + 100 and bus.state == bus.START:
+        bus.state = bus.RUNNING
+    elif 1257 < mouseX < 1350 and 495 < mouseY < 539:
+        sys.exit(0)
     else:
         bus.state = bus.RUNNING

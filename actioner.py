@@ -23,5 +23,10 @@ def sunAction(bus, screen, sets):
             del bus.sunStay[i]
             break
 
-
+def endAction(bus, screen, sets):
+    for zombie in bus.zombies:
+        if zombie.outOfBounds():
+            print("out of bounds")
+            bus.state = bus.DEAD
+            break
 

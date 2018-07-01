@@ -2,6 +2,7 @@
 加载图片路径
 """
 import pygame
+from  pygame.locals import *
 
 # 植物贴图的路径
 plantsImgDir = 'image/plants/'
@@ -295,3 +296,12 @@ class Setting(object):
         self.topY = self.bottomY - 5 * self.gridHeight
         # 右边界：
         self.rightX = self.gridXIndexes[9]
+
+        # 开始界面图片加载
+        self.surface = pygame.image.load('image/Surface.jpg')
+        self.surface = pygame.transform.scale(self.surface, (1400,600))
+        self.beginBtn = pygame.image.load('image/beginBtn.png').subsurface(Rect((0, 0), (329, 148)))
+        self.beginBtn = pygame.transform.scale(self.beginBtn, (500,200))
+
+        #结束界面图片加载
+        self.zombiewin = pygame.image.load('image/ZombiesWon.png')

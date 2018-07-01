@@ -123,3 +123,11 @@ def paintPause(bus, screen, sets):
     ft = pygame.font.Font('msyh.ttf', 20)
     Str = ft.render("请点击鼠标左键继续", True, (255, 0, 0))
     screen.blit(Str, (550, 90))
+
+# 绘制开始游戏界面
+def initStartSurface(bus, screen, sets):
+    screen.blit(sets.surface, (0,0))
+    screen.blit(sets.beginBtn, (740,100))
+
+def deadPaint(bus, screen, sets):
+    screen.blit(sets.zombiewin, (466,0))

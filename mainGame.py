@@ -12,6 +12,8 @@ import painter
 import actioner
 from entity.plant.peashooter import Peashooter
 from entity.plant.cherryBomb import CherryBomb
+import threading
+import time
 
 bus = Bus()
 sets = Setting()
@@ -28,12 +30,6 @@ def initSun():
         goal = random.randint(300, 600)
         sun = Sun(screen, sets.sunImage, xx, yy,goal)
         bus.sunFall.append(sun)
-
-# 初始场景绘制
-def initScenario():
-    screen.blit(sets.background, (0, 0))
-    screen.blit(sets.seedBank, (0, 0))
-
 # 植物频率值
 plantIndex = 0
 # 子弹生成频率值
@@ -44,6 +40,11 @@ paint部分
 
 # 场景绘制主函数
 def paint():
+    if bus.state == bus.START:
+        painter.initStartSurface(bus, screen, sets)
+        return
+
+    # 判断是否需要画暂停标志
     painter.initScenario(bus, screen, sets)
     paintZombies()
     painter.cardMovePaint(bus, screen, sets)
@@ -52,17 +53,18 @@ def paint():
 
     # 绘制下落及在地上的太阳
     painter.paintSun(bus, screen, sets)
-
-
     # 绘制太阳总分数状态
     painter.paintSunScore(bus, screen, sets)
-
     # 绘制进度条
     painter.painProgressBar(bus, screen, sets)
-
-    # 判断是否需要画暂停标志
     if bus.state == bus.PAUSE:
         painter.paintPause(bus, screen, sets)
+    elif bus.state == bus.DEAD:
+        painter.deadPaint(bus, screen, sets)
+        time.sleep(2)
+        
+
+
 
 
 
@@ -101,17 +103,12 @@ def action():
         zombiesAction()
         # 阳光的动作
         actioner.sunAction(bus, screen, sets)
-
         # 控制全局的时间轴时间增加
         bus.globalTime += 1
-
-
         for plant in bus.paintPlants:
             plant.step(bus, screen, sets)
-
-        # shootAction()
-
         hitAction()
+        actioner.endAction(bus, screen, sets)
 
 # 走一步
 def stepAction():

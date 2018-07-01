@@ -39,9 +39,12 @@ class Bus:
     gridList = [([-1] * 5) for i in range(9)]
 
     # 游戏状态
+    START = 0
     RUNNING = 1
     PAUSE = 2
-    state = RUNNING
+    END = 3
+    DEAD = 4
+    state = START
 
     music = None
 
