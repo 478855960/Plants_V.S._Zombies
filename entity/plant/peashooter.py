@@ -21,17 +21,15 @@ class Peashooter(Plant):
         self.life = 100
         self.sunshine = 100
         self.attack = 50
-        self.interval = 50
+        self.interval = 150
         self.cd = 10
 
-    def function(self):
-        pass
 
-    def step(self):
+    def step(self, bus, screen, sets):
         self.index += 1
         # 执行功能
         if self.index == self.interval:
-            self.function()
+            bus.bullets.append(self.shootBy(screen, sets.peaBulletImg))
             self.index = 0
         # 更改图片
         ix = self.index / 7 % len(self.images)

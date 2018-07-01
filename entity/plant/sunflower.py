@@ -38,7 +38,7 @@ class Sunflower(Plant):
 
         Bus.sunStay.append(sun)
 
-    def step(self):
+    def step(self, bus, screen, sets):
         self.index += 1
         # 执行功能
         if self.index % 600 == 0:

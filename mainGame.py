@@ -107,9 +107,7 @@ def action():
 
 
         for plant in bus.paintPlants:
-            plant.step()
-
-        shootAction()
+            plant.step(bus, screen, sets)
 
         hitAction()
 
@@ -135,15 +133,15 @@ def zombiesAction():
             bus.zombies.append(Zombie_normal(screen, sets.zombie_normalImages))
 
 # 子弹生成
-def shootAction():
-    global shootIndex
-    shootIndex += 1
-
-    if shootIndex % 300 == 0:
-        for plant in bus.paintPlants:
-            if isinstance(plant, Peashooter):
-                bullet = plant.shootBy(screen, sets.peaBulletImg)
-                bus.bullets.append(bullet)
+# def shootAction():
+#     global shootIndex
+#     shootIndex += 1
+#
+#     if shootIndex % 300 == 0:
+#         for plant in bus.paintPlants:
+#             if isinstance(plant, Peashooter):
+#                 bullet = plant.shootBy(screen, sets.peaBulletImg)
+#                 bus.bullets.append(bullet)
 
 
 # 碰撞测试

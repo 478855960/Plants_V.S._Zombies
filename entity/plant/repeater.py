@@ -1,5 +1,7 @@
 from entity.plant.plant import Plant
 from conf.settings import Setting
+from entity.bullet import Bullet
+import threading
 
 set = Setting()
 
@@ -20,18 +22,27 @@ class Repeater(Plant):
         self.life = 100
         self.sunshine = 200
         self.attack = 50
-        self.interval = 50
+        self.interval = 150
         self.cd = 10
 
-    def function(self):
-        pass
 
-    def step(self):
+    def step(self, bus, screen, sets):
         self.index += 1
         # 执行功能
         if self.index == self.interval:
-            self.function()
+            bus.bullets.append(self.shootBy(screen, sets.peaBulletImg))
+            timer = threading.Timer(0.3, self.shoot, (bus, screen, sets))
+            timer.start()
             self.index = 0
         # 更改图片
         ix = self.index / 7 % len(self.images)
         self.image = self.images[int(ix)]
+
+
+    def shootBy(self, screen, image):
+        bs = Bullet(screen, image, self.x + 50, self.y)
+        return bs
+
+    def shoot(self, bus, screen, sets):
+        bus.bullets.append(self.shootBy(screen, sets.peaBulletImg))
+        print("timer start")

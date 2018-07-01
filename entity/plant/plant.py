@@ -33,5 +33,5 @@ class Plant(object):
 
     # 进行一次功能执行
     @abc.abstractmethod
-    def step(self):
+    def step(self, bus, screen, sets):
         pass

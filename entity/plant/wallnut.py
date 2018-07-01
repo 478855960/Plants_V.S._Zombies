@@ -26,7 +26,7 @@ class Wallnut(Plant):
     def function(self):
         pass
 
-    def step(self):
+    def step(self, bus, screen, sets):
         self.index += 1
         # 执行功能
         if self.index == self.interval:
