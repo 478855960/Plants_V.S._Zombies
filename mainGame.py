@@ -24,7 +24,7 @@ bus.music = MusicPlayer()
 bus.music.play()
 
 def initSun():
-    for i in range(4):
+    for i in range(2):
         xx = random.randint(260, 880)
         yy = -random.randint(100, 300)
         goal = random.randint(300, 600)
@@ -122,7 +122,7 @@ def stepAction():
 # 僵尸生成
 def zombiesAction():
     bus.zombieIndex += 1
-    if 8000 <= bus.globalTime <= 9000 or 15500 <= bus.globalTime <= 15700:
+    if 7000 <= bus.globalTime <= 8000 or 14200 <= bus.globalTime <= 14400:
         bus.zombieRate = 125
     else:
         bus.zombieRate = 500

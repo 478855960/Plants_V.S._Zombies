@@ -100,9 +100,14 @@ def painProgressBar(bus, screen, sets):
         bus.music.water()
         bus.midPercentage = True
 
+    # 绘制一大波僵尸提示语
+    if percentage >= 70 and percentage <= 80:
+        screen.blit(sets.largeWave, (525, 240))
+
+
     # 绘制最后一波提示语
-    if percentage >= 99 and percentage <= 100:
-        screen.blit(sets.finalWave, (550, 240))
+    if percentage >= 143 and percentage <= 144:
+        screen.blit(sets.finalWave, (525, 240))
         if not bus.finalPercentage:
             bus.music.urgent()
             bus.finalPercentage = True
@@ -110,9 +115,11 @@ def painProgressBar(bus, screen, sets):
 
     screen.blit(sets.flagMeterFull, (1200, 560))
 
-    if percentage <= 157:
+    if percentage <= 145:
         screen.blit(sets.flagMeterEmpty.subsurface(Rect((0, 0), (157 - percentage, 21))), (1200, 560))
         screen.blit(sets.flagMeterParts1, (1340 - percentage, 560))
+    else:
+        screen.blit(sets.flagMeterParts1, (1340 - 145, 560))
 
     screen.blit(sets.flagMeterParts2, (1205, 557))
 
@@ -122,7 +129,7 @@ def paintPause(bus, screen, sets):
     pygame.font.init()
     ft = pygame.font.Font('msyh.ttf', 20)
     Str = ft.render("请点击鼠标左键继续", True, (255, 0, 0))
-    screen.blit(Str, (550, 90))
+    screen.blit(Str, (555, 90))
 
 # 绘制开始游戏界面
 def initStartSurface(bus, screen, sets):
@@ -131,3 +138,4 @@ def initStartSurface(bus, screen, sets):
 
 def deadPaint(bus, screen, sets):
     screen.blit(sets.zombiewin, (466,0))
+

@@ -74,16 +74,16 @@ class CherryBomb(Plant):
         # 当炸弹范围变到最大时，对僵尸造成伤害
         if ix == 7 and self.isBigest == 1:
             # 遍历僵尸列表
-            for i in range(len(self.bus.zombies)):
+            for zombie in self.bus.zombies:
                 # 对 3X3 范围内的僵尸统一造成5点伤害
                 # 用僵尸脚的两个点判断是否被樱桃炸弹炸到
-                if self.bus.zombies[i].y + 100 > self.y - 80 and self.bus.zombies[i].y + 100 <self.y + self.height and  \
-                    ((self.bus.zombies[i].x > self.x and self.bus.zombies[i].x < self.x + self.width) \
-                     or (self.bus.zombies[i].x + self.bus.zombies[i].width > self.x and \
-                         self.bus.zombies[i].x + self.bus.zombies[i].width < self.x + self.width)):
-                    self.bus.zombies[i].life -= 5
-                    if self.bus.zombies[i].life <= 0:
-                        del self.bus.zombies[i]
+                if zombie.y + 100 > self.y - 80 and zombie.y + 100 <self.y + self.height and  \
+                    ((zombie.x > self.x and zombie.x < self.x + self.width) \
+                     or (zombie.x + zombie.width > self.x and \
+                         zombie.x + zombie.width < self.x + self.width)):
+                    zombie.life -= 5
+                    if zombie.life <= 0:
+                        self.bus.zombies.remove(zombie)
 
 
         if self.isBigest == 1 and self.index == 130:

@@ -34,7 +34,7 @@ def cardMouseClickListener(bus):
             rangeCount = 0
         elif 50 <= bus.sunScore < 100:
             rangeCount = 2
-        elif 100 <= bus.sunScore < 150:
+        elif 100 <= bus.sunScore < 125:
             rangeCount = 3
         elif 150 <= bus.sunScore < 200:
             rangeCount = 5
