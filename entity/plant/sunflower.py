@@ -42,7 +42,7 @@ class Sunflower(Plant):
         self.index += 1
         # 执行功能
         if self.index % 600 == 0:
-             self.function()
+            self.function()
         #     self.index = 0
         # 更改图片
         ix = self.index / 10 % len(self.images)

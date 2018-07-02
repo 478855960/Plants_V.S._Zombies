@@ -24,6 +24,7 @@ class ZombieObject(object):
         self.height = image.get_rect()[3]
         self.life = life
         self.damage = damage
+        self.headFlag = True
 
     def outOfBounds(self):
         return self.x < 100

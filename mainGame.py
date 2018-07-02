@@ -25,7 +25,7 @@ bus.music = MusicPlayer()
 bus.music.play()
 
 def initSun():
-    for i in range(2):
+    for i in range(1):
         xx = random.randint(260, 880)
         yy = -random.randint(100, 300)
         goal = random.randint(300, 600)
@@ -162,7 +162,7 @@ def eat(zb):
                     zb.images = sets.zombieLostHeadAttackImages
                 elif zb.life <= 5:
                     zb.images = sets.normalAttackImages
-                elif zb.life <= 7:
+                elif zb.life <= 8:
                     if not isinstance(zb, Zombie_bucket):
                         zb.images = sets.coneheadAttackImages
                     else:

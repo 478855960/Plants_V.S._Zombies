@@ -59,9 +59,9 @@ def initScenario(bus, screen, sets):
     # 绘制暂停按钮
     screen.blit(sets.Button, (1265, 10))
     pygame.font.init()
-    ft = pygame.font.Font('msyh.ttf', 28)
+    ft = pygame.font.Font('hiw.ttf', 28)
     Str = ft.render("暂 停", True, (0, 0, 0))
-    screen.blit(Str, (1290, 10))
+    screen.blit(Str, (1290, 14))
 
 # 绘制太阳，包括在正在下落的和在地上的
 def paintSun(bus, screen, sets):
@@ -127,31 +127,53 @@ def painProgressBar(bus, screen, sets):
 def paintPause(bus, screen, sets):
     screen.blit(sets.Pause, (500, 0))
     pygame.font.init()
-    ft = pygame.font.Font('msyh.ttf', 20)
+    ft = pygame.font.Font('hiw.ttf', 20)
     Str = ft.render("请点击鼠标左键继续", True, (255, 0, 0))
-    screen.blit(Str, (555, 90))
+    screen.blit(Str, (562, 92))
 
 # 绘制开始游戏界面
 def initStartSurface(bus, screen, sets):
     screen.blit(sets.surface, (0,0))
     screen.blit(sets.beginBtn, (740,100))
 
+
+
 def deadPaint(bus, screen, sets):
-    screen.blit(sets.zombiewin, (466,0))
-    screen.blit(sets.selection, (933, 100))
+    screen.blit(sets.menuBar, (466, 100))
     pygame.font.init()
-    ft = pygame.font.Font('msyh.ttf', 20)
-    Str = ft.render("重新开始", True, (255, 0, 0))
-    screen.blit(Str, (1043, 110))
-    Str = ft.render("结束游戏", True, (255, 0, 0))
-    screen.blit(Str, (1043, 180))
+    ft = pygame.font.Font('hiw.ttf', 45)
+    Str = ft.render("游 戏 失 败", True, (255, 255, 255))
+    screen.blit(Str, (560, 255))
+    # 结束
+    screen.blit(sets.selectionBar, (555, 410))
+    pygame.font.init()
+    ft = pygame.font.Font('hiw.ttf', 32)
+    Str = ft.render("结  束", True, (60, 60, 60))
+    screen.blit(Str, (628, 417))
+
+    # 重新开始
+    screen.blit(sets.selectionBar, (555, 340))
+    pygame.font.init()
+    ft = pygame.font.Font('hiw.ttf', 32)
+    Str = ft.render("重新开始", True, (60, 60, 60))
+    screen.blit(Str, (605, 346))
 
 def wonPaint(bus, screen, sets):
-    screen.blit(sets.selection, (466, 100))
+    screen.blit(sets.menuBar, (466, 100))
     pygame.font.init()
-    ft = pygame.font.Font('msyh.ttf', 20)
-    Str = ft.render("重新开始", True, (255, 0, 0))
-    screen.blit(Str, (576, 110))
-    Str = ft.render("结束游戏", True, (255, 0, 0))
-    screen.blit(Str, (576, 180))
-    screen.blit(sets.banner, (466, 240))
+    ft = pygame.font.Font('hiw.ttf', 45)
+    Str = ft.render("闯 关 成 功", True, (255, 255, 255))
+    screen.blit(Str, (560, 255))
+    # 结束
+    screen.blit(sets.selectionBar, (555, 410))
+    pygame.font.init()
+    ft = pygame.font.Font('hiw.ttf', 32)
+    Str = ft.render("结  束", True, (60, 60, 60))
+    screen.blit(Str, (628, 417))
+
+    # 重新开始
+    screen.blit(sets.selectionBar, (555, 340))
+    pygame.font.init()
+    ft = pygame.font.Font('hiw.ttf', 32)
+    Str = ft.render("重新开始", True, (60, 60, 60))
+    screen.blit(Str, (605, 346))
