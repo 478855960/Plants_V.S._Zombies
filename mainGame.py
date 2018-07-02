@@ -10,7 +10,8 @@ from util.bus import Bus
 import mouseListener
 import painter
 import actioner
-from entity.plant.peashooter import Peashooter
+from entity.zombie.zombie_head import Zombie_head
+from entity.zombie.zombie_dead import Zombie_dead
 from entity.plant.cherryBomb import CherryBomb
 import threading
 import time
@@ -66,6 +67,9 @@ def paint():
 def paintZombies():
     for zombie in bus.zombies:
         zombie.blitme()
+        if isinstance(zombie, Zombie_head) or isinstance(zombie, Zombie_dead):
+            if zombie.reloadFlag == 1:
+                bus.zombies.remove(zombie)
 # 绘制植物
 def paintPlants():
     for plant in bus.paintPlants:
@@ -139,11 +143,20 @@ def hitAction():
     for zombie in bus.zombies:
         eat(zombie)
         hit(zombie)
+        if zombie.life == 5:
+            if not isinstance(zombie, Zombie_normal):
+                zombie.images = sets.zombie_normalImages
+        elif zombie.life == 3:
+            if zombie.headFlag is True:
+                zombie.images = sets.zombieLostHeadImages
+                zombie.headFlag = False
+        elif zombie.life == 0:
+            bus.zombies.remove(zombie)
 
 # 僵尸吃植物
 def eat(zb):
     for plant in bus.paintPlants:
-        if not isinstance(plant, CherryBomb):
+        if not isinstance(plant, CherryBomb) and not isinstance(zb, Zombie_head) and not isinstance(zb, Zombie_dead):
             if plant.x + plant.width/2 == zb.x + 20 and zb.y + 100 < plant.y + 100 and zb.y + 100 > plant.y:
                 if zb.life <= 3:
                     zb.images = sets.zombieLostHeadAttackImages
@@ -175,27 +188,23 @@ def eat(zb):
 # 僵尸被攻击
 def hit(zombie):
     for bullet in bus.bullets:
-        if zombie.hitBy(bullet):
-            print('HIT!!!!')
+        if zombie.hitBy(bullet) and not isinstance(zombie, Zombie_head) and not isinstance(zombie, Zombie_dead):
             zombie.life -= 1
             # 豌豆不穿透，仙人掌刺穿透
             if bullet.type == 0:
                 # for i in range(100):
                 #     screen.blit(sets.bulletHitImg, (zombie.x-100, zombie.y))
                 bus.bullets.remove(bullet)
+
             if zombie.life == 5:
                 if not isinstance(zombie, Zombie_normal):
                     zombie.images = sets.zombie_normalImages
             elif zombie.life == 3:
                 if zombie.headFlag is True:
                     zombie.images = sets.zombieLostHeadImages
-                    for image in sets.zombieHeadImages:
-                        screen.blit(pygame.image.load(image), (zombie.x, zombie.y))
-                    zombie.headFlag = False
+                    bus.zombies.append(Zombie_head(screen, sets.zombieHeadImages, zombie.x, zombie.y))
             elif zombie.life == 0:
-                bus.zombies.remove(zombie)
-                for image in sets.zombieDieImages:
-                    screen.blit(pygame.image.load(image), (zombie.x, zombie.y))
+                bus.zombies.append(Zombie_dead(screen, sets.zombieDieImages, zombie.x, zombie.y))
 
         # 子弹越界删除
         if bullet.outOfBounds():
