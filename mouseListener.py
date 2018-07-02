@@ -163,13 +163,13 @@ def runOrPause(bus, screen, sets):
         bus.state = bus.RUNNING
     elif bus.state == bus.DEAD or bus.state == bus.END:
         if 555 < mouseX < 780 and  340 < mouseY < 390 :
-            restart(bus)
+            restart(bus, screen)
             bus.state = bus.START
         elif 555 < mouseX < 780 and  410 < mouseY < 460 :
             sys.exit(0)
 
 # 初始化bus中的各个值
-def restart(bus):
+def restart(bus, screen):
     # 用于表示是否选择了卡片
     bus.cardState = Constant.CARD_NOT_CLICKED
 
@@ -191,6 +191,13 @@ def restart(bus):
     bus.sunFall = []
     # 存放已经停止的太阳的列表
     bus.sunStay = []
+
+    for i in range(1):
+        xx = random.randint(260, 880)
+        yy = -random.randint(100, 300)
+        goal = random.randint(300, 600)
+        sun = Sun(screen, sets.sunImage, xx, yy,goal)
+        bus.sunFall.append(sun)
     # 记录初始阳光数的
     bus.sunScore = 100
     # 初始化4个太阳  xx  yy 分别记录太阳的x坐标和y坐标
