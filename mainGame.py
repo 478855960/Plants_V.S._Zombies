@@ -149,7 +149,7 @@ def eat(zb):
                     zb.images = sets.zombieLostHeadAttackImages
                 elif zb.life <= 5:
                     zb.images = sets.normalAttackImages
-                elif zb.life <= 7:
+                elif zb.life <= 8:
                     if not isinstance(zb, Zombie_bucket):
                         zb.images = sets.coneheadAttackImages
                     else:

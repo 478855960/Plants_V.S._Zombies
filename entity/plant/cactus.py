@@ -36,5 +36,8 @@ class Cactus(Plant):
 
         # 子弹生成
     def shootBy(self, screen, image):
-        bs = Bullet(screen, image, self.x + 65, self.y + 23, 1)
+        bs = Bullet(screen, image, self.x + 55, self.y + 3, 1)
         return bs
+
+    def blitme(self):
+        self.screen.blit(self.image, (self.x - 10, self.y - 20))
