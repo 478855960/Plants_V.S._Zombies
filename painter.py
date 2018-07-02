@@ -136,22 +136,14 @@ def initStartSurface(bus, screen, sets):
     screen.blit(sets.surface, (0,0))
     screen.blit(sets.beginBtn, (740,100))
 
+
+
 def deadPaint(bus, screen, sets):
-    screen.blit(sets.zombiewin, (466,0))
-    screen.blit(sets.selection, (933, 100))
-    pygame.font.init()
-    ft = pygame.font.Font('msyh.ttf', 20)
-    Str = ft.render("重新开始", True, (255, 0, 0))
-    screen.blit(Str, (1043, 110))
-    Str = ft.render("结束游戏", True, (255, 0, 0))
-    screen.blit(Str, (1043, 180))
+    screen.blit(sets.menuBar, (466, 100))
+    screen.blit(sets.selectionBar, (555, 410))
+    screen.blit(sets.selectionBar, (555, 340))
 
 def wonPaint(bus, screen, sets):
-    screen.blit(sets.selection, (466, 100))
-    pygame.font.init()
-    ft = pygame.font.Font('msyh.ttf', 20)
-    Str = ft.render("重新开始", True, (255, 0, 0))
-    screen.blit(Str, (576, 110))
-    Str = ft.render("结束游戏", True, (255, 0, 0))
-    screen.blit(Str, (576, 180))
-    screen.blit(sets.banner, (466, 240))
+    screen.blit(sets.menuBar, (466, 100))
+    screen.blit(sets.selectionBar, (555, 410))
+    screen.blit(sets.selectionBar, (555, 340))
