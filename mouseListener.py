@@ -13,6 +13,7 @@ from entity.plant.repeater import Repeater
 from entity.plant.cactus import Cactus
 import sys
 from util.bus import Bus
+from musicplayer import MusicPlayer
 
 import random
 sets = Setting()
@@ -162,12 +163,68 @@ def runOrPause(bus, screen, sets):
         bus.state = bus.RUNNING
     elif bus.state == bus.DEAD or bus.state == bus.END:
         if 933 < mouseX < 1300 and  100 < mouseY < 150 :
-            bus = Bus()
-            bus.state = bus.RUNNING
+            restart(bus)
+            bus.state = bus.START
         elif 933 < mouseX < 1300 and  180 < mouseY < 230 :
             sys.exit(0)
         if 466 < mouseX < 560 and  100 < mouseY < 150 :
-            bus = Bus()
-            bus.state = bus.RUNNING
+            restart(bus)
+            bus.state = bus.START
         elif 466 < mouseX < 560 and  180 < mouseY < 230 :
             sys.exit(0)
+
+# 初始化bus中的各个值
+def restart(bus):
+    # 用于表示是否选择了卡片
+    bus.cardState = Constant.CARD_NOT_CLICKED
+
+    # 表示选择卡片的类型
+    bus.cardSelection = Constant.NUT_SELECTED
+
+    # 表示当前需要绘制的图片
+    bus.paintPlants = []
+
+    # 僵尸存储列表
+    bus.zombies = []
+    # 僵尸频率值
+    bus.zombieIndex = 0
+    # 掉头信号
+    bus.headFlag = True
+    bus.zombieRate = 0
+
+    # 存放正在下落太阳的列表
+    bus.sunFall = []
+    # 存放已经停止的太阳的列表
+    bus.sunStay = []
+    # 记录初始阳光数的
+    bus.sunScore = 100
+    # 初始化4个太阳  xx  yy 分别记录太阳的x坐标和y坐标
+    # xx = []
+    # yy = []
+
+    # 全局统一的时间轴
+    bus.globalTime = 0
+
+    # 格子的二维数组
+    bus.gridList = [([-1] * 5) for i in range(9)]
+
+    # 游戏状态
+    bus.state = bus.START
+
+    # 子弹存储列表
+    bus.bullets = []
+
+    #是否进入中段和末段
+    bus.midPercentage = False
+    bus.finalPercentage = False
+
+    # 植物频率值
+    bus.plantIndex = 0
+    # 子弹生成频率值
+    bus.shootIndex = 0
+
+    # 游戏结束信号
+    bus.endFlag = 0
+
+    bus.music = MusicPlayer()
+    bus.music.play()
